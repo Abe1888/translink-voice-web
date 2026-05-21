@@ -39,4 +39,4 @@ services:
         #
         # translinket.com is the primary cPanel-hosted frontend domain.
         # Add www variant because browsers send it as the Origin on www requests.
-        value: https://translinket.com,https://www.translinket.com
+        value: https://admikgizachew.com/abc,https://www.admikgizachew.com/abc

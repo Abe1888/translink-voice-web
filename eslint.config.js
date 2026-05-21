@@ -1,0 +1,80 @@
+import js from '@eslint/js';
+import tsPlugin from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+
+export default [
+  js.configs.recommended,
+  {
+    files: ['**/*.ts'],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+      },
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        performance: 'readonly',
+        requestAnimationFrame: 'readonly',
+        cancelAnimationFrame: 'readonly',
+        clearTimeout: 'readonly',
+        setTimeout: 'readonly',
+        clearInterval: 'readonly',
+        setInterval: 'readonly',
+        fetch: 'readonly',
+        navigator: 'readonly',
+        AudioContext: 'readonly',
+        GainNode: 'readonly',
+        AudioBuffer: 'readonly',
+        AudioBufferSourceNode: 'readonly',
+        OscillatorNode: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLCanvasElement: 'readonly',
+        SVGElement: 'readonly',
+        SVGSVGElement: 'readonly',
+        SVGPathElement: 'readonly',
+        SVGCircleElement: 'readonly',
+        SVGGElement: 'readonly',
+        NodeListOf: 'readonly',
+        Node: 'readonly',
+        Event: 'readonly',
+        MouseEvent: 'readonly',
+        KeyboardEvent: 'readonly',
+        ErrorEvent: 'readonly',
+        PromiseRejectionEvent: 'readonly',
+        Element: 'readonly',
+        CustomEvent: 'readonly',
+        Touch: 'readonly',
+        TouchEvent: 'readonly',
+        WebGLRenderingContext: 'readonly',
+        HTMLStyleElement: 'readonly',
+        __DEV__: 'readonly',
+        __PROD__: 'readonly',
+      },
+    },
+    plugins: {
+      '@typescript-eslint': tsPlugin,
+    },
+    rules: {
+      ...tsPlugin.configs.recommended.rules,
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_' },
+      ],
+      'no-console': 'off',
+    },
+  },
+  {
+    ignores: [
+      'node_modules/**',
+      'dist/**',
+      'dist-ssr/**',
+      '*.config.js',
+      '*.config.ts',
+    ],
+  },
+];

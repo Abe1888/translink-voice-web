@@ -1,0 +1,42 @@
+services:
+  - type: web
+    name: translink-voice-web
+    env: node
+    plan: starter
+
+    # Build: type-check → compile frontend (dist/) → compile server (dist-server/)
+    buildCommand: npm ci && npm run build
+
+    # Start: run the compiled server directly — no devDependencies needed at runtime
+    startCommand: node dist-server/index.js
+
+    # Render health check — hits the /api/health endpoint defined in api.ts
+    healthCheckPath: /api/health
+
+    envVars:
+      - key: NODE_ENV
+        value: production
+
+      - key: PORT
+        value: 10000
+        # Render internally routes to this port. Must match what the server listens on.
+
+      - key: GEMINI_API_KEY
+        sync: false
+        # ⚠ REQUIRED — set this secret in the Render dashboard → Environment → Add Secret.
+        # Obtain from https://aistudio.google.com/apikey
+
+      - key: APP_URL
+        # The public URL of THIS Render service.
+        # Used as one of the allowed WebSocket origins (browser connections from the
+        # Render-hosted copy of the frontend are validated against this value).
+        # Update if you rename the service or add a custom Render domain.
+        value: https://translink-voice-web.onrender.com
+
+      - key: ALLOWED_ORIGINS
+        # Comma-separated list of additional allowed origins for CORS and WebSocket
+        # origin validation. Must include every domain from which the frontend is served.
+        #
+        # translinket.com is the primary cPanel-hosted frontend domain.
+        # Add www variant because browsers send it as the Origin on www requests.
+        value: https://translinket.com,https://www.translinket.com

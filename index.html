@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- Primary Meta Tags -->
+    <title>TRANSLINK | Advanced Telematics & IoT Solutions</title>
+    <meta name="description" content="Military-grade GNSS tracking, fuel telematics, and AI-powered fleet management.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;900&family=Inter:wght@400;500;700&family=Noto+Sans+Ethiopic:wght@400;500;700;900&family=Outfit:wght@400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Bebas+Neue&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Preload critical 3D models (Phase 7 Optimization) -->
+
+    <!-- Stylesheets: Import the same global style tokens from the main project -->
+    <!-- These define --z-scene-3d and other critical z-index / layout variables -->
+    <link rel="stylesheet" href="/src/translink/styles/tailwind.css">
+    <link rel="stylesheet" href="/src/translink/styles/translink-shared.css">
+    <link rel="stylesheet" href="/src/translink/styles/translink-flow.css">
+
+    <style>
+        /* Ensure translink HUD overlay sits above the 3D scene */
+        #app {
+            position: relative;
+            z-index: 2000;
+            overflow: visible;
+            margin-left: var(--logo-column-width, 0);
+            transition: margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @media (max-width: 1024px) {
+            #app {
+                margin-left: 0;
+            }
+        }
+
+        /* Body must be transparent so the fixed 3D canvas bleeds through */
+        html,
+        body {
+            background: #f5f1e8;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+    <!-- 
+    The World.ts 3D engine injects #scene3d-container as the FIRST child of body
+    at z-index: -1 (--z-scene-3d). It is fixed, fullscreen, and pointer-events: none.
+    The #app div sits above it with z-index: var(--z-section-container).
+  -->
+    <div id="app"></div>
+
+    <script type="module" src="/src/translink/main.ts"></script>
+</body>
+
+</html>

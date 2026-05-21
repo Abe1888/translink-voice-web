@@ -31,7 +31,7 @@ services:
         # Used as one of the allowed WebSocket origins (browser connections from the
         # Render-hosted copy of the frontend are validated against this value).
         # Update if you rename the service or add a custom Render domain.
-        value: https://translink-voice-web.onrender.com
+        value: https://translink-voice-web-1.onrender.com
 
       - key: ALLOWED_ORIGINS
         # Comma-separated list of additional allowed origins for CORS and WebSocket

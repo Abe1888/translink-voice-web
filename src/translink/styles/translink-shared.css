@@ -1,0 +1,989 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   TRANSLINK SHARED DESIGN SYSTEM
+   The single source of truth for design tokens, typography, and global UI assets.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+    /* --- Brand Colors --- */
+    --brand-crimson: #c0202f;
+    --brand-crimson-rgb: 192, 32, 47;
+    --brand-crimson-hover: #b31d23;
+    --brand-white: #ffffff;
+    --brand-obsidian: #161616;
+    --brand-cream: #f5f1e8;
+    
+    /* --- Z-Index Registry --- */
+    --z-scene-3d: -100;
+    --z-background: 1;
+    --z-section-container: 2000;
+    --z-section-grid: 15;
+    --z-section-title: 180;
+    --z-indicator: 200;
+    --z-section-badge: 210;
+    --z-waypoint-overlay: 100;
+    --z-glass-card: 120;
+    --z-content: 130;
+    --z-footer-label: 150;
+    --z-navigation: 200;
+    --z-vision-btn: 210;
+    --z-ui-global: 5000; 
+    --z-noise-overlay: 900;
+    --z-cursor: 9999;
+
+    /* --- Typography Clamps (Aggressive Fluid Scaling) --- */
+    --fluid-h1: clamp(1.5rem, 4.5vw, 8rem);
+    --fluid-p: clamp(0.7rem, 1.2vw, 1.5rem);
+    --stat-value: clamp(1.5rem, 3.5vw, 5rem);
+    --stat-label: clamp(8px, 0.8vw, 16px);
+
+    /* --- Spacing & Layout DNA (Relative units for uniform scaling) --- */
+    --logo-column-width: 4%;
+    --sidebar-width: 11%;
+    --content-width: 80%;
+    --gutter-width: 5%;
+    --footer-height: clamp(40px, 8vh, 100px);
+    
+    --hero-p-inner: clamp(0.5rem, 2vw, 3rem);
+    --hero-p-outer: clamp(1rem, 4vw, 4rem);
+    --hero-gap: clamp(1.5rem, 4vw, 4rem);
+    --hero-title-mb: clamp(0.5rem, 2vh, 2rem);
+    --hero-para-mb: clamp(1rem, 3vh, 3rem);
+
+    /* --- INDEPENDENT THEME TOKENS (Granular Control) --- */
+    
+    /* 1. Decorative Categories */
+    --theme-line-color: #161616; 
+    --theme-line-opacity: 0.15;
+    
+    --theme-shape-color: rgba(22, 22, 22, 0.1);
+    --theme-shape-opacity: 1;
+    
+    --theme-bg-number-color: rgba(22, 22, 22, 0.03);
+    --theme-bg-number-opacity: 1;
+
+    /* 2. Typography Categories */
+    --theme-h-color: #161616;
+    --theme-p-color: rgba(22, 22, 22, 0.7);
+    --theme-label-color: rgba(22, 22, 22, 0.4);
+    
+    /* 3. Stat & Accent Categories */
+    --theme-stat-value-color: #c0202f;
+    --theme-vertical-title-color: #161616;
+
+    /* 4. Waypoint Categories */
+    --theme-wp-dot: #c0202f;
+    --theme-wp-title: #161616;
+    --theme-wp-subtitle: #c0202f;
+    --theme-wp-body: #161616;
+    --theme-wp-path: #161616;
+    --theme-wp-line: #161616;
+    --theme-wp-bg: transparent;
+
+    /* 5. HUD Categories */
+    --theme-button-hover: #c0202f;
+
+    /* --- Legacy Compatibility Aliases --- */
+
+
+    --crimson: var(--brand-crimson);
+    --white: var(--brand-white);
+    --black: var(--brand-obsidian);
+}
+
+/* --- Global Semantic Typography --- */
+h1, h2, h3, .text-primary { color: var(--theme-h-color); }
+p, .text-secondary { color: var(--theme-p-color); }
+.text-muted { color: var(--theme-label-color); }
+
+
+
+/* --- Semantic Deco Classes --- */
+.deco-bg-number {
+    color: var(--theme-bg-number-color);
+    opacity: var(--theme-bg-number-opacity);
+    font-weight: 900;
+    pointer-events: none;
+    user-select: none;
+    will-change: transform;
+}
+
+.deco-hud-line {
+    background: var(--theme-line-color);
+    opacity: var(--theme-line-opacity);
+    will-change: transform;
+}
+
+.deco-grid-linear {
+    background-image: 
+    linear-gradient(var(--theme-line-color) 1px, transparent 1px), 
+    linear-gradient(90deg, var(--theme-line-color) 1px, transparent 1px);
+    background-size: var(--theme-grid-size, 4rem) var(--theme-grid-size, 4rem);
+    opacity: var(--theme-bg-number-opacity);
+    will-change: transform;
+}
+
+.deco-grid-dots {
+    background-image: radial-gradient(circle, var(--theme-line-color) 1px, transparent 1px);
+    background-size: var(--theme-dot-grid-size, 2rem) var(--theme-dot-grid-size, 2rem);
+    opacity: var(--theme-bg-number-opacity);
+    will-change: transform;
+}
+
+.deco-shape-outline {
+    border: 1px solid var(--theme-shape-color);
+    opacity: var(--theme-shape-opacity);
+    will-change: transform;
+}
+
+.deco-shape-solid {
+    background: var(--theme-shape-color);
+    opacity: var(--theme-shape-opacity);
+    will-change: transform;
+}
+
+
+
+/* --- HUD Semantic UI System --- */
+.hud-frame-border {
+    border-color: var(--brand-obsidian);
+    opacity: 0.1;
+}
+
+.hud-metadata-mono {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.8vw;
+    text-transform: uppercase;
+    letter-spacing: -0.025em !important;
+    color: var(--brand-obsidian);
+    opacity: 0.6;
+    font-weight: 900 !important;
+}
+
+/* Vertical HUD Titles (Sidebar) */
+.vertical-text {
+    color: var(--theme-vertical-title-color) !important;
+}
+
+/* Hero Badge & Stat Values */
+.text-stat-value {
+    color: var(--theme-stat-value-color); /* <--- Applied via centralized theme */
+}
+
+
+.hud-button-base {
+    background: var(--brand-obsidian);
+    border: 1px solid var(--brand-obsidian);
+    color: var(--brand-white) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hud-button-base .hud-metadata-mono {
+    color: var(--brand-white) !important;
+    opacity: 0.8;
+}
+
+.hud-button-base:hover {
+    background: var(--brand-crimson);
+    border-color: var(--brand-crimson);
+    color: var(--brand-white) !important;
+}
+
+.hud-button-base:hover .hud-metadata-mono {
+    color: var(--brand-white) !important;
+    opacity: 1;
+}
+
+.hud-popup-container {
+    background: var(--brand-obsidian);
+    color: var(--brand-white);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.hud-accent-glow {
+    box-shadow: 0 0 15px var(--brand-crimson);
+}
+
+.hud-accent-text {
+    color: var(--brand-crimson);
+}
+
+.hud-accent-bg {
+    background: var(--brand-crimson);
+}
+
+
+/* --- Global Resets --- */
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: none !important;
+    background-color: transparent;
+    color: var(--brand-white);
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, .text-primary {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 900 !important;
+    letter-spacing: -0.025em !important;
+}
+
+.vertical-text {
+    font-family: 'Space Grotesk', sans-serif !important;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    display: inline-block;
+    white-space: nowrap;
+    font-weight: 400 !important;
+    letter-spacing: 0.05em !important;
+}
+
+/* Specific spacing for vertical characters to prevent overlap/overcrowding */
+.vertical-text .char {
+    display: inline-block;
+    margin: 0.05em 0; /* Balanced vertical gap for readability and impact */
+    line-height: 1;
+}
+
+h1.vertical-text {
+    font-family: 'Outfit', sans-serif !important;
+    /* Outfit is wider than Bebas, so we reduce the max vh slightly to ensure fit */
+    font-size: clamp(2rem, 5.5vw, 3.4vh); 
+    letter-spacing: 0.02em !important; 
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 700 !important;
+}
+
+/* --- Vertical Title Responsiveness --- */
+@media (max-width: 1024px) {
+    h1.vertical-text {
+        font-size: clamp(1.2rem, 4vw, 2.8vh);
+    }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+    h1.vertical-text {
+        font-size: clamp(1rem, 5vw, 2.5vh);
+    }
+}
+
+@media (max-width: 932px) and (orientation: landscape) {
+    h1.vertical-text {
+        font-size: clamp(0.75rem, 2vw, 5vh);
+    }
+}
+
+/* --- HUD Decorative Elements --- */
+.section-vertical-title__frame {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 20px;
+    opacity: 1;
+    z-index: 0;
+    pointer-events: none;
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.4));
+}
+
+.section-vertical-title__frame line {
+    stroke: var(--brand-white);
+    stroke-width: 1.5px;
+    opacity: 0.6;
+}
+
+/* --- Shared Components (Legacy Migration) --- */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+.section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.4rem 0.8rem;
+    background-color: var(--brand-crimson);
+    color: var(--brand-white);
+    font-size: 0.65rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    z-index: var(--z-section-badge);
+}
+
+/* --- Custom Cursor System --- */
+#cursor-dot,
+#cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: var(--z-cursor);
+    will-change: transform;
+}
+
+#cursor-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--brand-white);
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+#cursor-ring {
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+body.hovering #cursor-ring {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Keyframe Library --- */
+@keyframes scan {
+    0% { left: -100%; }
+    100% { left: 200%; }
+}
+
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   FOOTER DESIGN SYSTEM
+   Standardized, responsive footer for all project sections.
+   ═══════════════════════════════════════════════════════════════════════════ */
+.section-footer {
+    width: 100%;
+    height: var(--footer-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 clamp(1.5rem, 5vw, 4rem);
+    z-index: 10;
+    border-top: 1px solid rgba(5, 5, 5, 0.05);
+    background: transparent;
+}
+
+.footer-metadata {
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--brand-obsidian);
+    opacity: 0.4;
+    user-select: none;
+}
+
+.footer-section-name {
+    color: var(--brand-crimson);
+}
+
+.section-footer-stats {
+    display: flex;
+    gap: clamp(1rem, 2vw, 2rem);
+    align-items: center;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   GLOBAL CLIENT LOGO SCROLL SYSTEM
+   Fixed 4% column on the extreme left.
+   ═══════════════════════════════════════════════════════════════════════════ */
+.global-client-logo-column {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--logo-column-width); /* 4% */
+    height: 100vh;
+    z-index: 4000;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    overflow: hidden;
+    pointer-events: auto;
+    container-type: size;
+}
+
+.logo-scroll-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(3rem, 50cqw, 5rem); /* Increased gap for high-ratio logos */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    animation: globalLogoScroll 45s linear infinite;
+}
+
+.logo-scroll-container::after {
+    content: "";
+    display: block;
+    height: clamp(3rem, 50cqw, 5rem);
+}
+
+.global-client-logo-item {
+    width: 100%;
+    height: clamp(6rem, 180cqw, 10rem); /* Increased container height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: visible;
+}
+
+.global-client-logo-item img {
+    /* Height in CSS = visual width in column due to rotation */
+    height: 38% !important; 
+    width: auto !important;
+    max-width: none !important;
+    object-fit: contain;
+    /* Sharp & Clear Black & White: Fully opaque with no blending effects as requested */
+    filter: grayscale(1) contrast(1.4) brightness(1.1) drop-shadow(0 0 1px rgba(255,255,255,0.3));
+    mix-blend-mode: normal;
+    opacity: 1 !important; 
+    transform: rotate(-90deg);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.global-client-logo-item:hover img {
+    filter: none !important;
+    transform: rotate(-90deg) scale(1.1);
+}
+
+@keyframes globalLogoScroll {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(0, -33.33333333%, 0); }
+}
+
+/* --- ROBOT FRIEND (GEBRELINK) STYLES --- */
+.creature {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 70px;
+    height: 100px;
+    z-index: 5; /* Sits behind the button (z-10) */
+    pointer-events: none;
+    transform: translateX(-50%) translateY(20px);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+    perspective: 500px; /* Enable 3D depth for child elements */
+}
+
+.creature.visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-110%);
+}
+
+/* Decoupled floating animation wrapper */
+.robot-floating-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.creature.visible .robot-floating-wrapper {
+    animation: robotFloat 4s ease-in-out infinite;
+}
+
+@keyframes robotFloat {
+    0%, 100% { transform: translateY(0) translateX(-5px); }
+    50% { transform: translateY(-8px) translateX(5px); }
+}
+
+.robot-head {
+    width: 45px;
+    height: 40px;
+    background: #e0e0e0; /* Silver Gray */
+    border-radius: 50% 50% 45% 45%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    box-shadow: none;
+    transform-origin: bottom center;
+}
+
+.creature.visible .robot-head {
+    animation: robotLookAround 2.5s ease-in-out infinite;
+}
+
+@keyframes robotLookAround {
+    0%, 100% { transform: rotateY(0deg); }
+    25% { transform: rotateY(-35deg); }
+    75% { transform: rotateY(35deg); }
+}
+
+.robot-visor {
+    width: 32px;
+    height: 14px;
+    background: #000;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Smooth parallax shift */
+}
+
+.creature.visible .robot-visor {
+    animation: robotVisorParallax 2.5s ease-in-out infinite;
+}
+
+@keyframes robotVisorParallax {
+    0%, 100% { transform: translateX(-50%) translateX(0); }
+    25% { transform: translateX(-50%) translateX(-6px); }
+    75% { transform: translateX(-50%) translateX(6px); }
+}
+
+.robot-eye {
+    width: 7px;
+    height: 4px;
+    background: #00d2ff; /* Signature Blue LED */
+    border-radius: 2px;
+}
+
+.creature.visible .robot-eye {
+    animation: robotBlink 4s infinite;
+}
+
+@keyframes robotBlink {
+    0%, 95%, 100% { transform: scaleY(1); opacity: 1; }
+    97.5% { transform: scaleY(0.1); opacity: 0.5; }
+}
+
+.robot-headset {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 52px;
+    height: 35px;
+    border-top: 3px solid #000; /* Matte Black */
+    border-radius: 50% 50% 0 0;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.earcup {
+    width: 10px;
+    height: 16px;
+    background: #000; /* Matte Black */
+    border-radius: 4px;
+    position: absolute;
+    top: 15px;
+}
+
+.earcup.l { left: -6px; }
+.earcup.r { right: -6px; }
+
+.robot-antenna {
+    width: 2px;
+    height: 10px;
+    background: rgba(255,255,255,0.5);
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.robot-antenna::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--brand-crimson); /* Brand Red */
+    border-radius: 50%;
+    position: absolute;
+    top: -4px;
+    left: -2px;
+}
+
+.robot-mic {
+    width: 15px;
+    height: 2px;
+    background: #000; /* Matte Black */
+    position: absolute;
+    bottom: 0;
+    right: -2px;
+    transform: rotate(30deg);
+    transform-origin: left center;
+}
+
+.robot-mic::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: #000; /* Matte Black */
+    border-radius: 50%;
+    position: absolute;
+    right: -2px;
+    top: -1.5px;
+}
+
+.robot-mouth {
+    width: 20px;
+    height: 4px;
+    background: #555;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+.robot-mouth::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1px;
+    width: 12px;
+    height: 2px;
+    background: rgba(0, 210, 255, 0.4);
+    border-radius: 1px;
+}
+
+.robot-body {
+    width: 40px;
+    height: 60px;
+    background: #e0e0e0; /* Silver Gray */
+    border-radius: 35% 35% 70% 70%;
+    margin: -8px auto 0;
+    position: relative;
+    z-index: 1;
+    box-shadow: inset 0 -5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.robot-emblem {
+    width: 22px;
+    height: 22px;
+    background: var(--brand-crimson);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.robot-emblem img {
+    width: 14px;
+    height: auto;
+}
+
+.robot-hand {
+    width: 9px;
+    height: 44px;
+    background: #e0e0e0; /* Silver Gray */
+    position: absolute;
+    top: -5px;
+    z-index: 0;
+    box-shadow: inset -2px 0 5px rgba(0,0,0,0.05);
+    opacity: 0.98;
+}
+
+.robot-hand.l {
+    left: -4px;
+    transform: rotate(18deg);
+    transform-origin: top center;
+    border-radius: 100% 20% 5% 80%;
+}
+
+.robot-hand.r {
+    right: -4px;
+    transform: rotate(-18deg);
+    transform-origin: top center;
+    border-radius: 20% 100% 80% 5%;
+}
+
+.creature.visible .robot-hand.l {
+    animation: robotHoverL 2.5s ease-in-out infinite alternate;
+}
+
+.creature.visible .robot-hand.r {
+    animation: robotHoverR 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes robotHoverL {
+    0% { transform: rotate(18deg) translateY(0) translateX(0); }
+    100% { transform: rotate(12deg) translateY(8px) translateX(2px); }
+}
+
+@keyframes robotHoverR {
+    0% { transform: rotate(-18deg) translateY(0) translateX(0); }
+    100% { transform: rotate(-12deg) translateY(8px) translateX(-2px); }
+}
+
+@keyframes creaturePulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.creature-hint {
+    position: absolute;
+    bottom: -15px; /* Move under the creature */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #000; /* Black text */
+    font-size: 9px;
+    font-weight: 900;
+    z-index: 20; /* Ensure it sits ABOVE the button */
+    font-family: 'DM Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+.creature-hint.show {
+    opacity: 1;
+}
+
+/* Keyframes moved to global logo section above */
+
+/* Robot Loader: Hologram entrance and visor scan animations */
+:root {
+    --robot-scale: 1.8;
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --robot-scale: 1.25;
+    }
+}
+
+@media (max-width: 640px) {
+    :root {
+        --robot-scale: 0.95;
+    }
+}
+
+@media (max-height: 650px) {
+    :root {
+        --robot-scale: 0.9 !important;
+    }
+}
+
+.loader-bg-glow {
+    background: radial-gradient(circle at center, rgba(192, 32, 47, 0.12) 0%, transparent 80%);
+}
+
+.robot-hologram-wrapper {
+    animation: robotEntrance 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes robotEntrance {
+    from {
+        transform: scale(0.5) translateY(100px);
+        opacity: 0;
+        filter: blur(10px);
+    }
+    to {
+        transform: scale(var(--robot-scale)) translateY(0);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.robot-visor::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent, rgba(0, 210, 255, 0.1), transparent);
+    animation: visorScan 2s linear infinite;
+}
+
+@keyframes visorScan {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(100%); }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    .global-client-logo-column {
+        display: none;
+    }
+}
+
+
+
+/* Cleanup: Force hide unauthorized dynamic mirrors */
+.css2d-wp-stat {
+    display: none !important;
+}
+
+/* Amharic Font Override */
+html[lang="am"] * {
+    font-family: 'Noto Sans Ethiopic', sans-serif !important;
+    letter-spacing: normal !important;
+}
+
+/* Arabic Font Override & Premium Aesthetics */
+html[lang="ar"] * {
+    font-family: 'Cairo', 'Space Grotesk', sans-serif !important;
+    letter-spacing: normal !important;
+}
+
+/* Right-To-Left (RTL) Layout Alignment Flipping & Mirroring System */
+
+/* 1. TranslinkSVGMorphingLogo Position Flipping */
+[dir="rtl"] #hero-logo-container {
+    left: auto !important;
+    right: 0 !important;
+}
+@media (min-width: 1024px) {
+    [dir="rtl"] #hero-logo-container {
+        right: var(--logo-column-width, 4%) !important;
+        left: auto !important;
+    }
+}
+
+/* 2. TranslinkClientLogoScroll Column Flipping & Border Mirroring */
+[dir="rtl"] .global-client-logo-column {
+    left: auto !important;
+    right: 0 !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-right: none !important;
+}
+
+/* 3. GlobalNavIndicator Position Flipping */
+[dir="rtl"] #global-nav-indicator {
+    right: auto !important;
+    left: 0.75rem !important; /* aligns perfectly to left instead of right-3 */
+}
+@media (min-width: 768px) {
+    [dir="rtl"] #global-nav-indicator {
+        left: 2rem !important; /* aligns perfectly to left instead of md:right-8 */
+        right: auto !important;
+    }
+}
+
+/* 4. App Container Margin Offset Shift */
+[dir="rtl"] #app {
+    margin-left: 0 !important;
+    margin-right: var(--logo-column-width, 4%) !important;
+}
+@media (max-width: 1024px) {
+    [dir="rtl"] #app {
+        margin-right: 0 !important;
+    }
+}
+
+/* 5. TranslinkEasterEggFriend (Companion) Position Flipping */
+[dir="rtl"] #tl-companion {
+    right: auto !important;
+    left: 32px !important;
+}
+
+/* 6. TranslinkTelemetryButton Mount Position Flipping (All 10 Sections) */
+[dir="rtl"] [id$="-telemetry-mount"] {
+    left: auto !important;
+    right: 0 !important;
+}
+
+/* 7. Global Sound Toggle Position Flipping */
+[dir="rtl"] #global-sound-toggle {
+    right: auto !important;
+    left: 1.5rem !important;
+}
+@media (min-width: 768px) {
+    [dir="rtl"] #global-sound-toggle {
+        left: 2.5rem !important;
+        right: auto !important;
+    }
+}
+
+/* 8. Global Language Toggle Position Flipping */
+[dir="rtl"] #global-language-toggle {
+    right: auto !important;
+    left: 5rem !important;
+}
+@media (min-width: 768px) {
+    [dir="rtl"] #global-language-toggle {
+        left: 6rem !important;
+        right: auto !important;
+    }
+}
+
+/* 9. Section Vertical Decorative HUD Lines Flipping */
+[dir="rtl"] #s2-v-line,
+[dir="rtl"] #s4-v-line,
+[dir="rtl"] #s6-v-line,
+[dir="rtl"] #s8-v-line {
+    right: var(--sidebar-width) !important;
+    left: auto !important;
+}
+[dir="rtl"] #s1-v-line,
+[dir="rtl"] #s3-v-line,
+[dir="rtl"] #s5-v-line,
+[dir="rtl"] #s7-v-line,
+[dir="rtl"] #s9-v-line {
+    left: var(--gutter-width) !important;
+    right: auto !important;
+}
+
+/* --- Futuristic Telematics Path & Track Animations --- */
+.telemetry-track-svg {
+    opacity: 0.85;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.telemetry-track-path {
+    stroke: #ffffff;
+    stroke-width: 1.5;
+    fill: none;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawTelemetryPath 12s linear infinite;
+}
+
+.telemetry-track-dot-svg-glow,
+.telemetry-track-dot-svg-core {
+    animation: moveTelemetryDot 12s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes drawTelemetryPath {
+    0% { stroke-dashoffset: 1000; }
+    50% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: -1000; }
+}
+
+@keyframes moveTelemetryDot {
+    0% { offset-distance: 0%; }
+    100% { offset-distance: 100%; }
+}

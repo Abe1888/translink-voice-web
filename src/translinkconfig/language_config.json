@@ -1,0 +1,1042 @@
+{
+  "languages": {
+    "EN": 1,
+    "AM": 1,
+    "AR": 1
+  },
+  "en": {
+    "global": {
+      "brand": "Translink",
+      "audio": "AUDIO",
+      "audio_on": "ON",
+      "audio_off": "OFF",
+      "telemetry": "TELEMETRY",
+      "status_active": "Status // Active",
+      "easter_egg": "Psst! I'm here!",
+      "loader_core_init": "CORE_INIT",
+      "loader_data_stream": "DATA_STREAM_LOAD",
+      "loader_neural_sync": "NEURAL_SYNC_INIT",
+      "loader_complete": "LOADING COMPLETE",
+      "loader_telematics": "Advanced Telematics:",
+      "loader_solution": "One-Stop Solution",
+      "system_active": "System Active"
+    },
+    "sections": {
+      "s1": {
+        "id": "s1",
+        "sidebar_label": "Section _ 01 // Hero",
+        "vertical_title": "TELEMATICS",
+        "hero_part1": "Advanced ",
+        "hero_part2": "Telematics:",
+        "hero_part3": "One-Stop Solution",
+        "hero_description": "With reliable hardware, real-time visibility, and proactive support, Translink removes the daily pressure from fleet management with Guaranteed ROI.",
+        "popup_title": "Translink Hero",
+        "popup_description": "Advanced Telematics & IoT Solutions. Empowering organizations with real-time visibility and AI-driven safety.",
+        "popup_tags": [
+          "ENTERPRISE",
+          "IOT",
+          "ROI",
+          "ONE-STOP"
+        ],
+        "card1_title": "GPS Tracking",
+        "card1_tags": [
+          "Vehicle",
+          "Asset",
+          "Fixed",
+          "Portable"
+        ],
+        "card1_desc": "Real-time tracking and operational visibility for fleets, assets, and personnel powered by advanced GNSS devices.",
+        "card2_title": "Fuel Management",
+        "card2_tags": [
+          "Level",
+          "Filling",
+          "Drain",
+          "Economy"
+        ],
+        "card2_desc": "High accuracy fuel monitoring with level visibility, alerts & reports on filling, draining & consumption to reduce fuel cost.",
+        "trust_badge_years": "Years of",
+        "trust_badge_excellence": "Excellence",
+        "trust_badge_platform": "Platform",
+        "trust_badge_uptime": "Uptime"
+      },
+      "s2": {
+        "id": "s2",
+        "sidebar_label": "Section _ 02 // Tracking",
+        "vertical_title": "ASSETS REAL TIME TRACKING",
+        "popup_title": "Precision Tracking",
+        "popup_description": "Global fleet visibility with high-accuracy GPS tracking and real-time movement analysis.",
+        "popup_tags": [
+          "GPS",
+          "REAL-TIME",
+          "GLOBAL",
+          "SENSORS"
+        ],
+        "card1_title": "Video AI",
+        "card1_tags": [
+          "ADAS",
+          "DMS",
+          "Video",
+          "Advisor"
+        ],
+        "card1_desc": "AI-powered driver monitoring with ADAS and DMS alerts, real-time video streaming, and behavior analytics for safer operations.",
+        "card2_title": "Safety & Security",
+        "card2_tags": [
+          "ID",
+          "Immobilizer",
+          "SOS",
+          "Speed Limiter"
+        ],
+        "card2_desc": "Secure driver identification, emergency alerting, immobilization & speed regulation for fleet protection."
+      },
+      "s3": {
+        "id": "s3",
+        "sidebar_label": "Section _ 03 // Fuel",
+        "vertical_title": "REAL TIME FUEL MONITORING",
+        "popup_title": "Fuel Telematics",
+        "popup_description": "Advanced fuel management and resource optimization. Monitor consumption and prevent fuel loss.",
+        "popup_tags": [
+          "FUEL",
+          "ECONOMY",
+          "RESOURCES",
+          "ANALYTICS"
+        ],
+        "card1_title": "UBI Solutions",
+        "card1_tags": [
+          "Behavior",
+          "Risk Scores",
+          "Premiums"
+        ],
+        "card1_desc": "Usage-based insurance powered by driving behavior, trip patterns, and risk scoring to personalize fleet insurance premiums.",
+        "card2_title": "Tire Intelligence",
+        "card2_tags": [
+          "TPMS",
+          "Rotation",
+          "Puncture",
+          "Thread"
+        ],
+        "card2_desc": "Tire monitoring with real-time pressure, temperature, and status detection improving safety and tire lifespan."
+      },
+      "s4": {
+        "id": "s4",
+        "sidebar_label": "Section _ 04 // Analytics",
+        "vertical_title": "VEHICLE HEALTH & DIAGNOSTICS",
+        "popup_title": "CAN/OBD Analytics",
+        "popup_description": "Deep vehicle health monitoring and engine diagnostics via CAN-bus and OBD-II interfaces.",
+        "popup_tags": [
+          "DIAGNOSTICS",
+          "ENGINE",
+          "HEALTH",
+          "REPORTS"
+        ],
+        "card1_title": "Freight Security",
+        "card1_tags": [
+          "Load Sensor",
+          "E-Lock",
+          "Tags"
+        ],
+        "card1_desc": "Provides smart protection & status monitoring for cargo using connected load sensors, electronic locks, and tracking tags.",
+        "card2_title": "RFID & BLE IoT",
+        "card2_tags": [
+          "RTLS",
+          "Asset Tracking",
+          "ID",
+          "NFC"
+        ],
+        "card2_desc": "Enables wireless identification & tracking of people, documents & assets, delivering real-time location and status visibility."
+      },
+      "s5": {
+        "id": "s5",
+        "sidebar_label": "Section _ 05 // AI",
+        "vertical_title": "AI-DRIVEN VIDEO",
+        "popup_title": "Fleet Tracking",
+        "popup_description": "Comprehensive fleet management system for large-scale operations and logistics.",
+        "popup_tags": [
+          "LOGISTICS",
+          "FLEET",
+          "MANAGEMENT",
+          "SCALE"
+        ]
+      },
+      "s6": {
+        "id": "s6",
+        "sidebar_label": "Section _ 06 // IoT",
+        "vertical_title": "SMART IOT SOLUTIONS",
+        "popup_title": "Vehicle Diagnostics",
+        "popup_description": "Proactive maintenance and real-time vehicle status reporting for minimized downtime.",
+        "popup_tags": [
+          "MAINTENANCE",
+          "UPTIME",
+          "PROACTIVE",
+          "ALERTS"
+        ],
+        "card1_title": "CAN Intelligence",
+        "card1_tags": [
+          "FMS",
+          "OBD",
+          "DTC",
+          "Tacho"
+        ],
+        "card1_desc": "Realtime data from CAN & OBD, providing FMS insights, trouble codes, driving performance & maintenance alerts."
+      },
+      "s7": {
+        "id": "s7",
+        "sidebar_label": "Section _ 07 // Vision",
+        "vertical_title": "AI-DRIVEN VIDEO",
+        "popup_title": "Sensor Network",
+        "popup_description": "Ultrasonic monitoring and IoT sensor integration for precise environmental and asset data.",
+        "popup_tags": [
+          "IOT",
+          "ULTRASONIC",
+          "SENSORS",
+          "NETWORK"
+        ],
+        "card1_title": "Video AI",
+        "card1_tags": [
+          "ADAS",
+          "DMS",
+          "Video",
+          "Advisor"
+        ],
+        "card1_desc": "AI-powered driver monitoring with ADAS and DMS alerts, real-time video streaming, and behavior analytics for safer operations."
+      },
+      "s8": {
+        "id": "s8",
+        "sidebar_label": "Section _ 08 // Solutions",
+        "vertical_title": "ONE-STOP IoT SOLUTIONS",
+        "popup_title": "AI / IoT Intelligence",
+        "popup_description": "Edge intelligence network bridging the gap between physical operations and digital strategy.",
+        "popup_tags": [
+          "AI",
+          "EDGE",
+          "DIGITAL",
+          "STRATEGY"
+        ]
+      },
+      "s9": {
+        "id": "s9",
+        "sidebar_label": "Section _ 09 // Support",
+        "vertical_title": "24/7 SUPPORT",
+        "content_header": "· V · I · D · E · O   · T · E · L · E · M · A · T · I · C · S ·",
+        "content_headline_part1": "Transform your windshield",
+        "content_headline_part2": "into a",
+        "content_headline_part3": "safety shield.",
+        "stat_1_value": "5CH",
+        "stat_1_label": "Video Channels",
+        "stat_2_value": "1080P",
+        "stat_2_label": "HD Resolution",
+        "stat_3_value": "24/7",
+        "stat_3_label": "Live Streaming",
+        "stat_4_value": "AI+",
+        "stat_4_label": "ADAS & DMS",
+        "popup_title": "Vision Telematics",
+        "popup_description": "AI-powered video telematics (ADAS & DMS) to transform your windshield into a safety shield.",
+        "popup_tags": [
+          "VISION",
+          "AI",
+          "ADAS",
+          "DMS"
+        ]
+      },
+      "s10": {
+        "id": "s10",
+        "sidebar_label": "Section _ 10 // Connect",
+        "vertical_title": "24/7 CONNECT",
+        "popup_title": "Contact Support",
+        "popup_description": "Connect with the Translink support team for expert assistance and technical guidance.",
+        "popup_tags": [
+          "SUPPORT",
+          "CONNECT",
+          "TECH",
+          "CONTACT"
+        ]
+      }
+    },
+    "waypoints": {
+      "fuel-head": {
+        "title": "SENSOR HEAD",
+        "subtitle": "PRECISION TRACKING",
+        "description": "Military-grade GNSS tracking with sub-meter accuracy. 24/7 visibility and geofencing.",
+        "stats": [
+          "SUB-METER",
+          "24/7",
+          "GLOBAL"
+        ]
+      },
+      "harness": {
+        "title": "WIRING HARNESS",
+        "subtitle": "SECURE CONNECTIVITY",
+        "description": "Industrial-shielded harness for harsh environments. Real-time diagnostic reporting.",
+        "stats": [
+          "IP69K",
+          "STAINLESS",
+          "SHIELDED"
+        ]
+      },
+      "base-mount": {
+        "title": "MOUNTING BASE",
+        "subtitle": "FLANGE SYSTEM",
+        "description": "High-durability aluminum flange with universal mounting pattern for all tank types.",
+        "stats": [
+          "AL-6061",
+          "UNIVERSAL",
+          "PATENTED"
+        ]
+      },
+      "precision-tracking": {
+        "title": "PRECISION PROBE",
+        "subtitle": "CAPACITIVE SENSING",
+        "description": "Solid-state probe with no moving parts. Ultra-precise level detection across all terrain.",
+        "stats": [
+          "±0.1%",
+          "SOLID-STATE",
+          "ANODIZED"
+        ]
+      },
+      "iot-sensor": {
+        "title": "IOT MODULE",
+        "subtitle": "EDGE AI INTEGRATED",
+        "description": "On-board processing units transform telemetry into actionable fleet intelligence.",
+        "stats": [
+          "CORTEX-M4",
+          "LTE-M1",
+          "BLE 5.0"
+        ]
+      },
+      "vision-ai": {
+        "title": "VISION AI",
+        "subtitle": "ADAS & DMS",
+        "description": "Dual-stream AI cameras. Collision prevention, fatigue detection, and in-cab coaching.",
+        "stats": [
+          "1080P",
+          "AI-DUAL",
+          "LIVE"
+        ]
+      },
+      "contact": {
+        "title": "CONTACT US",
+        "subtitle": "GET STARTED",
+        "description": "Connect with our team to transform your fleet data into a competitive advantage.",
+        "stats": [
+          "+251 944-33-4344",
+          "hello@translink.et"
+        ]
+      },
+      "visit-us": {
+        "title": "VISIT US",
+        "subtitle": "ADDIS ABEBA",
+        "description": "Kera, SD Bldg. Office 404",
+        "stats": []
+      },
+      "security-bolt": {
+        "title": "SECURITY BOLT",
+        "subtitle": "FASTENING SYSTEM",
+        "description": "High-tensile security bolt that securely fastens and tightens the fuel level sensor to the tank via the base plate, ensuring a tamper-proof seal.",
+        "stats": [
+          "SECURITY",
+          "TAMPER-PROOF",
+          "STAINLESS"
+        ]
+      },
+      "precision-filter": {
+        "title": "PRECISION FILTER",
+        "subtitle": "ADVANCED FILTRATION",
+        "description": "Integrated high-performance filter that protects the capacitive probe from contaminants and sediment, ensuring ultra-accurate readings.",
+        "stats": [
+          "MULTI-STAGE",
+          "SEDIMENT-FREE",
+          "PROTECTIVE"
+        ]
+      }
+    }
+  },
+  "am": {
+    "global": {
+      "brand": "ትራንስሊንክ",
+      "audio": "ድምጽ",
+      "audio_on": "አብራ",
+      "audio_off": "አጥፋ",
+      "telemetry": "ቴሌሜትሪ",
+      "status_active": "ስርዓት // ንቁ",
+      "easter_egg": "እዚህ ነኝ!",
+      "loader_core_init": "ስርዓት_ጀምር",
+      "loader_data_stream": "መረጃ በማንበብ ላይ",
+      "loader_neural_sync": "ስርዓቱን በማመሳሰል ላይ",
+      "loader_complete": "ጭነት ተጠናቋል",
+      "loader_telematics": "የላቀ ቴሌማቲክስ፡",
+      "loader_solution": "የተሟላ መፍትሔ",
+      "system_active": "ስርዓቱ ሙሉ በሙሉ ስራ ላይ ነው"
+    },
+    "sections": {
+      "s1": {
+        "id": "s1",
+        "sidebar_label": "ክፍል _ 01 // መነሻ",
+        "vertical_title": "ቴሌማቲክስ",
+        "hero_part1": "የላቀ ",
+        "hero_part2": "ቴሌማቲክስ፡",
+        "hero_part3": "የተሟላ መፍትሔ",
+        "hero_description": "ትራንስሊንክ አስተማማኝ ሃርድዌርን፣ የቀጥታ ክትትልን እና ቀዳሚ ድጋፍን በማቀናጀት፤ ከተሽከርካሪ ስምሪት አስተዳደር ላይ የሚፈጠረውን የዕለት ተዕለት ጫና በመቀነስ የተረጋገጠ ትርፋማነትን ያስገኛል።",
+        "popup_title": "ትራንስሊንክ ሄሮ",
+        "popup_description": "የላቁ የቴሌማቲክስ እና IoT መፍትሔዎች። ተቋማትን በቀጥታ ክትትል እና በ AI በተደገፈ ደህንነት ያጠናክራል።",
+        "popup_tags": [
+          "ኢንተርፕራይዝ",
+          "IoT",
+          "ROI",
+          "ሁለገብ"
+        ],
+        "card1_title": "የጂፒኤስ (GPS) ክትትል",
+        "card1_tags": [
+          "ተሽከርካሪ",
+          "ንብረት",
+          "ቋሚ",
+          "ተንቀሳቃሽ"
+        ],
+        "card1_desc": "በዘመናዊ የጂኤንኤስኤስ (GNSS) መሣሪያዎች የታገዘ፣ ለተሽከርካሪዎች፣ ንብረቶች እና ሰራተኞች የሚሆን የቅጽበት ክትትል እና የስራ ላይ እይታ።",
+        "card2_title": "የነዳጅ አስተዳደር",
+        "card2_tags": [
+          "መጠን",
+          "መሙላት",
+          "መቀነስ",
+          "ቁጠባ"
+        ],
+        "card2_desc": "የነዳጅ ወጪን ለመቀነስ የሚያስችል ከፍተኛ ትክክለኛነት ያለው የነዳጅ ክትትል፤ የነዳጅ መጠንን ከማሳየት ባለፈ በመሙላት፣ መቀነስ እና ፍጆታ ዙሪያ ማሳወቂያዎችን እና ሪፖርቶችን ያቀርባል።",
+        "trust_badge_years": "የልምድ",
+        "trust_badge_excellence": "ዓመታት",
+        "trust_badge_platform": "የስርዓት",
+        "trust_badge_uptime": "ዝግጁነት"
+      },
+      "s2": {
+        "id": "s2",
+        "sidebar_label": "ክፍል _ 02 // ክትትል",
+        "vertical_title": "የንብረቶች ቀጥታ ክትትል",
+        "popup_title": "ትክክለኛ ክትትል",
+        "popup_description": "በከፍተኛ ትክክለኛነት የጂፒኤስ (GPS) ክትትል እና የቀጥታ የእንቅስቃሴ ትንተና በመታገዝ ዓለም አቀፍ የተሽከርካሪዎች ስምሪት እይታን ያቀርባል።",
+        "popup_tags": [
+          "ጂፒኤስ (GPS)",
+          "የቀጥታ",
+          "ዓለም-አቀፍ",
+          "ሴንሰሮች"
+        ],
+        "card1_title": "ቪዲዮ AI",
+        "card1_tags": [
+          "ADAS",
+          "DMS",
+          "ቪዲዮ",
+          "አማካሪ"
+        ],
+        "card1_desc": "ለተሻለ ደህንነት በ AI የተደገፈ የአሽከርካሪ ክትትልን ከ ADAS እና DMS ማሳወቂያዎች፣ ከቀጥታ የቪዲዮ ስርጭት እና ከባህሪ ትንተና ጋር ያቀርባል።",
+        "card2_title": "ደህንነት እና ጥበቃ",
+        "card2_tags": [
+          "መለያ",
+          "ሞተር አጋጅ",
+          "SOS (የአደጋ ጊዜ)",
+          "ፍጥነት መቆጣጠሪያ"
+        ],
+        "card2_desc": "የአሽከርካሪ መለያን፣ የአደጋ ጊዜ ማሳወቂያን፣ የሞተር እንቅስቃሴ ማቋረጫን እና የፍጥነት መቆጣጠሪያን በማካተት ለተሽከርካሪዎች ስምሪት አስተማማኝ ጥበቃ ይሰጣል።"
+      },
+      "s3": {
+        "id": "s3",
+        "sidebar_label": "ክፍል _ 03 // ነዳጅ",
+        "vertical_title": "የነዳጅ ቀጥታ ቁጥጥር",
+        "popup_title": "የነዳጅ ቴሌማቲክስ",
+        "popup_description": "የላቀ የነዳጅ አስተዳደር እና የሃብት አጠቃቀም። የነዳጅ ፍጆታን ይቆጣጠሩ እንዲሁም ብክነትን ይከላከሉ።",
+        "popup_tags": [
+          "ነዳጅ",
+          "ቁጠባ",
+          "ሃብቶች",
+          "ትንታኔ"
+        ],
+        "card1_title": "የ UBI መፍትሔዎች",
+        "card1_tags": [
+          "ባህሪ",
+          "የአደጋ ግምገማ",
+          "ክፍያዎች"
+        ],
+        "card1_desc": "የአሽከርካሪን ባህሪ እና የጉዞ ልምዶችን መሰረት በማድረግ የተሽከርካሪ የመድን ክፍያዎችን የሚያስተካክል ዘመናዊ የመድን መፍትሔ።",
+        "card2_title": "ዘመናዊ የጎማ ክትትል",
+        "card2_tags": [
+          "TPMS",
+          "ሽክርክር",
+          "መበሳት",
+          "የጎማ ጥርስ (Thread)"
+        ],
+        "card2_desc": "የጎማን ደህንነት እና የአገልግሎት ዘመን ለማሻሻል የቅጽበት ግፊትን፣ የሙቀት መጠንን እና አጠቃላይ ሁኔታን የሚያሳውቅ የጎማ ክትትል።"
+      },
+      "s4": {
+        "id": "s4",
+        "sidebar_label": "ክፍል _ 04 // ትንታኔ",
+        "vertical_title": "የተሽከርካሪ ጤና እና ምርመራ",
+        "popup_title": "CAN/OBD ትንታኔ",
+        "popup_description": "በ CAN-bus እና OBD-II በይነገጾች አማካኝነት ጥልቅ የተሽከርካሪ ጤና ክትትል እና የሞተር ምርመራዎችን ያካሂዳል።",
+        "popup_tags": [
+          "ምርመራዎች",
+          "ሞተር",
+          "ጤና",
+          "ሪፖርቶች"
+        ],
+        "card1_title": "የጭነት ደህንነት",
+        "card1_tags": [
+          "የክብደት ሴንሰር",
+          "የኤሌክትሮኒክ ቁልፍ",
+          "መለያዎች"
+        ],
+        "card1_desc": "የተሳሰሩ የክብደት ሴንሰሮችን፣ የኤሌክትሮኒክ ቁልፎችን እና የመከታተያ መለያዎችን በመጠቀም ለጭነት ዘመናዊ ጥበቃ እና የሁኔታ ክትትልን ያቀርባል።",
+        "card2_title": "RFID እና BLE IoT",
+        "card2_tags": [
+          "RTLS",
+          "የንብረት ክትትል",
+          "መለያ",
+          "NFC"
+        ],
+        "card2_desc": "የሰዎችን፣ የሰነዶችን እና የንብረቶችን ገመድ አልባ መለያ እና ክትትል በማስቻል፣ የቅጽበት አካባቢን እና የሁኔታን እይታ ያቀርባል።"
+      },
+      "s5": {
+        "id": "s5",
+        "sidebar_label": "ክፍል _ 05 // AI",
+        "vertical_title": "በ AI የተደገፈ የቪዲዮ",
+        "popup_title": "የተሽከርካሪ ስምሪት ክትትል",
+        "popup_description": "ለከፍተኛ ደረጃ ስራዎች እና ሎጂስቲክስ የሚሆን አጠቃላይ የተሽከርካሪ ስምሪት አስተዳደር ስርዓት።",
+        "popup_tags": [
+          "ሎጂስቲክስ",
+          "የተሽከርካሪ ስምሪት",
+          "አስተዳደር",
+          "መጠን (Scale)"
+        ]
+      },
+      "s6": {
+        "id": "s6",
+        "sidebar_label": "ክፍል _ 06 // IoT",
+        "vertical_title": "ዘመናዊ የ IoT መፍትሔዎች",
+        "popup_title": "የተሽከርካሪ ምርመራዎች",
+        "popup_description": "የተሽከርካሪ መበላሸትን እና የቆይታ ጊዜን ለመቀነስ የሚያስችል ቀዳሚ ጥገና እና የቅጽበት የተሽከርካሪ ሁኔታ ሪፖርት ማቅረብ።",
+        "popup_tags": [
+          "ጥገና",
+          "የስራ-ጊዜ",
+          "ቀዳሚ-እርምጃ",
+          "ማሳወቂያዎች"
+        ],
+        "card1_title": "CAN መረጃ",
+        "card1_tags": [
+          "FMS",
+          "OBD",
+          "DTC",
+          "Tacho"
+        ],
+        "card1_desc": "ከ CAN እና OBD የቅጽበት መረጃዎችን በመሰብሰብ፤ የ FMS መረጃዎችን፣ የችግር ኮዶችን፣ የማሽከርከር ብቃትን እና የጥገና ማሳወቂያዎችን ያቀርባል።"
+      },
+      "s7": {
+        "id": "s7",
+        "sidebar_label": "ክፍል _ 07 // እይታ",
+        "vertical_title": "በ AI የተደገፈ የቪዲዮ",
+        "popup_title": "የሴንሰር አውታረ መረብ",
+        "popup_description": "ለትክክለኛ የአካባቢ እና የንብረት መረጃ፣ የአልትራሶኒክ ክትትል እና የ IoT ሴንሰሮች ውህደት።",
+        "popup_tags": [
+          "IoT",
+          "አልትራሶኒክ",
+          "ሴንሰሮች",
+          "አውታረ-መረብ"
+        ],
+        "card1_title": "የቪዲዮ AI",
+        "card1_tags": [
+          "ADAS",
+          "DMS",
+          "ቪዲዮ",
+          "አማካሪ"
+        ],
+        "card1_desc": "ለተሻለ ደህንነት በ AI የተደገፈ የአሽከርካሪ ክትትል ከ ADAS እና DMS ማሳወቂያዎች፣ የቅጽበት የቪዲዮ ስርጭት እና የባህሪ ትንተና ጋር።"
+      },
+      "s8": {
+        "id": "s8",
+        "sidebar_label": "ክፍል _ 08 // መፍትሔዎች",
+        "vertical_title": "ሁሉን-አቀፍ የ IoT መፍትሔዎች",
+        "popup_title": "AI / IoT ማስተዋል",
+        "popup_description": "በአካላዊ ስራዎች እና በዲጂታል ስልቶች መካከል ያለውን ክፍተት የሚያጠብብ የ Edge (ኤጅ) ማስተዋል አውታረ መረብ።",
+        "popup_tags": [
+          "AI",
+          "ኤጅ (EDGE)",
+          "ዲጂታል",
+          "ስልት"
+        ]
+      },
+      "s9": {
+        "id": "s9",
+        "sidebar_label": "ክፍል _ 09 // ድጋፍ",
+        "vertical_title": "የ24/7 ድጋፍ",
+        "content_header": "· ቪ · ዲ · ዮ   · ቴ · ሌ · ማ · ቲ · ክ · ስ ·",
+        "content_headline_part1": "የፊት መስታወትዎን ወደ",
+        "content_headline_part2": "አስተማማኝ",
+        "content_headline_part3": "የደህንነት ጋሻ ይለውጡት",
+        "stat_1_value": "5CH",
+        "stat_1_label": "የቪዲዮ ቻናሎች",
+        "stat_2_value": "1080P",
+        "stat_2_label": "የምስል ጥራት (HD)",
+        "stat_3_value": "24/7",
+        "stat_3_label": "የቀጥታ ስርጭት",
+        "stat_4_value": "AI+",
+        "stat_4_label": "ADAS እና DMS",
+        "popup_title": "የእይታ ቴሌማቲክስ",
+        "popup_description": "የፊት መስታወትዎን ወደ ደህንነት ጋሻ ለመቀየር የሚያስችል በ AI የተደገፈ የቪዲዮ ቴሌማቲክስ (ADAS እና DMS)።",
+        "popup_tags": [
+          "እይታ",
+          "AI",
+          "ADAS",
+          "DMS"
+        ]
+      },
+      "s10": {
+        "id": "s10",
+        "sidebar_label": "ክፍል _ 10 // ግንኙነት",
+        "vertical_title": "የ24/7 ግንኙነት",
+        "popup_title": "የድጋፍ ማዕከልን ያግኙ",
+        "popup_description": "ለባለሙያ እገዛ እና ለቴክኒካዊ መመሪያ ከትራንስሊንክ የድጋፍ ቡድን ጋር ይገናኙ።",
+        "popup_tags": [
+          "ድጋፍ",
+          "ግንኙነት",
+          "ቴክኒክ",
+          "ማግኘት"
+        ]
+      }
+    },
+    "waypoints": {
+      "fuel-head": {
+        "title": "የሴንሰር ራስ",
+        "subtitle": "ትክክለኛ ክትትል",
+        "description": "ከወታደራዊ ደረጃ ጋር የሚመጣጠን የ GNSS ክትትል በከፍተኛ ትክክለኛነት። የ24/7 እይታ እና የክልል ጥበቃ (Geofencing)።",
+        "stats": [
+          "እጅግ-ትክክለኛ",
+          "24/7",
+          "ዓለም-አቀፍ"
+        ]
+      },
+      "harness": {
+        "title": "የኬብል መስመር",
+        "subtitle": "አስተማማኝ ግንኙነት",
+        "description": "ለከባድ የስራ አካባቢዎች የሚሆን በኢንዱስትሪ ደረጃ የተጠበቀ የኬብል መስመር። የቅጽበት የምርመራ ሪፖርት።",
+        "stats": [
+          "IP69K",
+          "የማይዝግ",
+          "የተጠበቀ"
+        ]
+      },
+      "base-mount": {
+        "title": "መገጠሚያ መሰረት",
+        "subtitle": "የፍላንጅ ስርዓት",
+        "description": "ለሁሉም ታንክ አይነቶች የሚስማማ ከፍተኛ ጥንካሬ ያለው የአሉሚኒየም ፍላንጅ።",
+        "stats": [
+          "AL-6061",
+          "ሁለገብ",
+          "የባለቤትነት-መብት"
+        ]
+      },
+      "precision-tracking": {
+        "title": "ትክክለኛ መለኪያ",
+        "subtitle": "አቅም (Capacitive) መለኪያ",
+        "description": "ምንም ተንቀሳቃሽ አካል የሌለው መለኪያ። በሁሉም መልክዓ ምድር እጅግ-ትክክለኛ የሆነ የነዳጅ መጠን መለየት።",
+        "stats": [
+          "±0.1%",
+          "ድፍን (Solid-state)",
+          "አኖዳይዝድ"
+        ]
+      },
+      "iot-sensor": {
+        "title": "የ IoT ሞጁል",
+        "subtitle": "ኤጅ (Edge) AI የተካተተበት",
+        "description": "በመሳሪያው ላይ ያሉ አቀነባባሪዎች ቴሌሜትሪን ወደ ተግባራዊ የተሽከርካሪ ስምሪት መረጃ ይለውጣሉ።",
+        "stats": [
+          "CORTEX-M4",
+          "LTE-M1",
+          "BLE 5.0"
+        ]
+      },
+      "vision-ai": {
+        "title": "የቪዲዮ AI",
+        "subtitle": "ADAS እና DMS",
+        "description": "ባለ ሁለት-አቅጣጫ AI ካሜራዎች። ግጭት መከላከል፣ ድካም ማወቅ እና የውስጥ አሽከርካሪ ምክር።",
+        "stats": [
+          "1080P",
+          "AI-ድርብ",
+          "ቀጥታ"
+        ]
+      },
+      "contact": {
+        "title": "አግኙን",
+        "subtitle": "አሁኑኑ ይጀምሩ",
+        "description": "የተሽከርካሪዎን መረጃ ወደ ተወዳዳሪ ጥቅም ለመለወጥ ከቡድናችን ጋር ይገናኙ።",
+        "stats": [
+          "+251 944-33-4344",
+          "hello@translink.et"
+        ]
+      },
+      "visit-us": {
+        "title": "ይጎብኙን",
+        "subtitle": "አዲስ አበባ",
+        "description": "ቄራ፣ ኤስ ዲ (SD) ህንፃ ቢሮ 404",
+        "stats": []
+      },
+      "security-bolt": {
+        "title": "የጥበቃ ቦልት",
+        "subtitle": "የማሰሪያ ስርዓት",
+        "description": "የነዳጅ መጠን መለኪያውን (sensor) ከታንኩ ጋር በፅኑ የሚያያይዝ እና የሚያጠብቅ፤ እንዲሁም አስተማማኝ ጥበቃ የሚሰጥ ከፍተኛ ጥንካሬ ያለው ቦልት።",
+        "stats": [
+          "ጥበቃ",
+          "አስተማማኝ",
+          "የማይዝግ"
+        ]
+      },
+      "precision-filter": {
+        "title": "ትክክለኛ ማጣሪያ",
+        "subtitle": "ዘመናዊ ማጣሪያ",
+        "description": "መለኪያውን (probe) ከቆሻሻ እና ከደለል በመጠበቅ፤ ሁልጊዜም ትክክለኛ የነዳጅ መጠን መረጃ እንዲገኝ የሚያደርግ በታንኩ ውስጥ የሚገኝ ከፍተኛ ብቃት ያለው ማጣሪያ።",
+        "stats": [
+          "ደረጃውን የጠበቀ",
+          "ከደለል የጸዳ",
+          "አስተماማኝ"
+        ]
+      }
+    }
+  },
+  "ar": {
+    "global": {
+      "brand": "ترانسلينك",
+      "audio": "الصوت",
+      "audio_on": "تشغيل",
+      "audio_off": "إيقاف",
+      "telemetry": "الاتصال عن بعد",
+      "status_active": "الحالة // نشط",
+      "easter_egg": "بست! أنا هنا!",
+      "loader_core_init": "تهيئة_النظام",
+      "loader_data_stream": "تحميل_تدفق_البيانات",
+      "loader_neural_sync": "تزامن_النظام",
+      "loader_complete": "اكتمل التحميل",
+      "loader_telematics": "الاتصالات السلكية واللاسلكية المتقدمة:",
+      "loader_solution": "الحل المتكامل",
+      "system_active": "النظام نشط"
+    },
+    "sections": {
+      "s1": {
+        "id": "s1",
+        "sidebar_label": "القسم _ 01 // الرئيسية",
+        "vertical_title": "الاتصال عن بعد",
+        "hero_part1": "الأنظمة المتقدمة ",
+        "hero_part2": "للاتصال عن بعد:",
+        "hero_part3": "الحل المتكامل",
+        "hero_description": "بفضل الأجهزة الموثوقة، والرؤية في الوقت الفعلي، والدعم الاستباقي، تزيل ترانسلينك الضغط اليومي عن إدارة الأسطول مع عائد استثمار مضمون.",
+        "popup_title": "ترانسلينك الرئيسية",
+        "popup_description": "حلول متقدمة للاتصال عن بعد وإنترنت الأشياء. تمكين المؤسسات من خلال الرؤية في الوقت الفعلي والسلامة المدعومة بالذكاء الاصطناعي.",
+        "popup_tags": [
+          "المؤسسات",
+          "إنترنت الأشياء",
+          "عائد الاستثمار",
+          "الحل المتكامل"
+        ],
+        "card1_title": "تتبع نظام تحديد المواقع (GPS)",
+        "card1_tags": [
+          "مركبة",
+          "أصل",
+          "ثابت",
+          "محمول"
+        ],
+        "card1_desc": "تتبع في الوقت الفعلي ورؤية تشغيلية للأساطيل والأصول والأفراد بدعم من أجهزة الملاحة عبر الأقمار الصناعية المتقدمة.",
+        "card2_title": "إدارة الوقود",
+        "card2_tags": [
+          "مستوى",
+          "تعبئة",
+          "تصريف",
+          "توفير"
+        ],
+        "card2_desc": "مراقبة وقود عالية الدقة مع رؤية واضحة للمستوى، وتنبيهات وتقارير عن التعبئة والتصريف والاستهلاك لتقليل تكلفة الوقود.",
+        "trust_badge_years": "سنوات من",
+        "trust_badge_excellence": "التميز",
+        "trust_badge_platform": "المنصة",
+        "trust_badge_uptime": "وقت التشغيل"
+      },
+      "s2": {
+        "id": "s2",
+        "sidebar_label": "القسم _ 02 // التتبع",
+        "vertical_title": "تتبع الأصول في الوقت الفعلي",
+        "popup_title": "تتبع دقيق",
+        "popup_description": "رؤية عالمية للأسطول مع تتبع نظام تحديد المواقع (GPS) عالي الدقة وتحليل الحركة في الوقت الفعلي.",
+        "popup_tags": [
+          "تحديد المواقع",
+          "الوقت الفعلي",
+          "عالمي",
+          "مستشعرات"
+        ],
+        "card1_title": "الفيديو بالذكاء الاصطناعي",
+        "card1_tags": [
+          "أنظمة مساعدة السائق",
+          "مراقبة السائق",
+          "فيديو",
+          "مستشار"
+        ],
+        "card1_desc": "مراقبة السائق بالذكاء الاصطناعي مع تنبيهات أنظمة مساعدة السائق ومراقبة حالة السائق، وبث الفيديو المباشر، وتحليلات السلوك لعمليات أكثر أماناً.",
+        "card2_title": "السلامة والأمن",
+        "card2_tags": [
+          "الهوية",
+          "مانع الحركة",
+          "طوارئ",
+          "محدد السرعة"
+        ],
+        "card2_desc": "تحديد هوية السائق بشكل آمن، وتنبيهات الطوارئ، ومنع الحركة والتحكم بالسرعة لحماية الأسطول."
+      },
+      "s3": {
+        "id": "s3",
+        "sidebar_label": "القسم _ 03 // الوقود",
+        "vertical_title": "مراقبة الوقود في الوقت الفعلي",
+        "popup_title": "تكنولوجيا الوقود",
+        "popup_description": "إدارة متقدمة للوقود وتحسين الموارد. راقب الاستهلاك وامنع خسائر الوقود.",
+        "popup_tags": [
+          "الوقود",
+          "التوفير",
+          "الموارد",
+          "التحليلات"
+        ],
+        "card1_title": "حلول التأمين القائم على الاستخدام",
+        "card1_tags": [
+          "سلوك",
+          "تقييم المخاطر",
+          "أقساط التأمين"
+        ],
+        "card1_desc": "تأمين قائم على الاستخدام مدعوم بسلوك القيادة وأنماط الرحلات وتقييم المخاطر لتخصيص أقساط تأمين أسطول المركبات.",
+        "card2_title": "ذكاء الإطارات",
+        "card2_tags": [
+          "نظام مراقبة ضغط الإطارات",
+          "تدوير",
+          "ثقب",
+          "عمق النقشة"
+        ],
+        "card2_desc": "مراقبة الإطارات مع استشعار الضغط ودرجة الحرارة والحالة في الوقت الفعلي لتحسين السلامة وعمر الإطارات."
+      },
+      "s4": {
+        "id": "s4",
+        "sidebar_label": "القسم _ 04 // التحليلات",
+        "vertical_title": "صحة المركبة وتشخيص الأعطال",
+        "popup_title": "تحليلات شبكة المركبة (CAN/OBD)",
+        "popup_description": "مراقبة عميقة لصحة المركبة وتشخيص المحرك عبر واجهات شبكة المركبة (CAN-bus) ومنفذ التشخيص الذاتي (OBD-II).",
+        "popup_tags": [
+          "تشخيص الأعطال",
+          "المحرك",
+          "الصحة",
+          "التقارير"
+        ],
+        "card1_title": "أمن الشحن",
+        "card1_tags": [
+          "مستشعر الحمولة",
+          "القفل الإلكتروني",
+          "الملصقات"
+        ],
+        "card1_desc": "حماية ذكية ومراقبة حالة البضائع باستخدام مستشعرات الحمولة المتصلة، والأقفال الإلكترونية، وملصقات التتبع.",
+        "card2_title": "تكنولوجيا إنترنت الأشياء والتعرف اللاسلكي",
+        "card2_tags": [
+          "نظام تحديد الموقع الفعلي",
+          "تتبع الأصول",
+          "الهوية",
+          "التواصل قريب المدى"
+        ],
+        "card2_desc": "تمكين تحديد الهوية وتتبع الأشخاص والمستندات والأصول لاسلكياً، مما يوفر رؤية للموقع والحالة في الوقت الفعلي."
+      },
+      "s5": {
+        "id": "s5",
+        "sidebar_label": "القسم _ 05 // الذكاء الاصطناعي",
+        "vertical_title": "الفيديو المدعوم بالذكاء الاصطناعي",
+        "popup_title": "تتبع الأسطول",
+        "popup_description": "نظام شامل لإدارة الأسطول للعمليات والخدمات اللوجستية واسعة النطاق.",
+        "popup_tags": [
+          "الخدمات اللوجستية",
+          "الأسطول",
+          "الإدارة",
+          "النطاق"
+        ]
+      },
+      "s6": {
+        "id": "s6",
+        "sidebar_label": "القسم _ 06 // إنترنت الأشياء",
+        "vertical_title": "حلول إنترنت الأشياء الذكية",
+        "popup_title": "تشخيص المركبات",
+        "popup_description": "صيانة استباقية وتقارير حالة المركبة في الوقت الفعلي لتقليل وقت التوقف عن العمل.",
+        "popup_tags": [
+          "الصيانة",
+          "وقت التشغيل",
+          "استباقي",
+          "التنبيهات"
+        ],
+        "card1_title": "ذكاء شبكة المركبة (CAN)",
+        "card1_tags": [
+          "إدارة الأسطول",
+          "التشخيص الذاتي",
+          "رموز الأعطال",
+          "تاخوغراف"
+        ],
+        "card1_desc": "بيانات في الوقت الفعلي من شبكة المركبة ومنفذ التشخيص، توفر رؤى إدارة الأسطول، ورموز الأعطال، وأداء القيادة، وتنبيهات الصيانة."
+      },
+      "s7": {
+        "id": "s7",
+        "sidebar_label": "القسم _ 07 // الرؤية",
+        "vertical_title": "الفيديو المدعوم بالذكاء الاصطناعي",
+        "popup_title": "شبكة المستشعرات",
+        "popup_description": "مراقبة بالموجات فوق الصوتية وتكامل مستشعرات إنترنت الأشياء للحصول على بيانات بيئية وأصول دقيقة.",
+        "popup_tags": [
+          "إنترنت الأشياء",
+          "موجات فوق صوتية",
+          "المستشعرات",
+          "الشبكة"
+        ],
+        "card1_title": "الفيديو بالذكاء الاصطناعي",
+        "card1_tags": [
+          "أنظمة مساعدة السائق",
+          "مراقبة السائق",
+          "فيديو",
+          "مستشار"
+        ],
+        "card1_desc": "مراقبة السائق بالذكاء الاصطناعي مع تنبيهات أنظمة مساعدة السائق ومراقبة حالة السائق، وبث الفيديو المباشر، وتحليلات السلوك لعمليات أكثر أماناً."
+      },
+      "s8": {
+        "id": "s8",
+        "sidebar_label": "القسم _ 08 // الحلول",
+        "vertical_title": "حلول إنترنت الأشياء المتكاملة",
+        "popup_title": "ذكاء الذكاء الاصطناعي وإنترنت الأشياء",
+        "popup_description": "شبكة ذكاء الحافة التي تسد الفجوة بين العمليات المادية والاستراتيجية الرقمية.",
+        "popup_tags": [
+          "الذكاء الاصطناعي",
+          "ذكاء الحافة",
+          "رقمي",
+          "استراتيجية"
+        ]
+      },
+      "s9": {
+        "id": "s9",
+        "sidebar_label": "القسم _ 09 // الدعم",
+        "vertical_title": "دعم على مدار الساعة 24/7",
+        "content_header": "· ت · ك · ن · و · ل · و · ج · ي · ا   · ا · ل · ف · ي · د · ي · و ·",
+        "content_headline_part1": "حوّل الزجاج الأمامي",
+        "content_headline_part2": "إلى",
+        "content_headline_part3": "درع أمان وحماية.",
+        "stat_1_value": "5CH",
+        "stat_1_label": "قنوات الفيديو",
+        "stat_2_value": "1080P",
+        "stat_2_label": "دقة عالية الوضوح",
+        "stat_3_value": "24/7",
+        "stat_3_label": "البث المباشر",
+        "stat_4_value": "AI+",
+        "stat_4_label": "ADAS و DMS",
+        "popup_title": "رؤية الاتصال عن بعد",
+        "popup_description": "تكنولوجيا الفيديو بالذكاء الاصطناعي (ADAS و DMS) لتحويل الزجاج الأمامي لمركبتك إلى درع أمان وحماية.",
+        "popup_tags": [
+          "الرؤية",
+          "الذكاء الاصطناعي",
+          "أنظمة مساعدة السائق",
+          "مراقبة السائق"
+        ]
+      },
+      "s10": {
+        "id": "s10",
+        "sidebar_label": "القسم _ 10 // تواصل معنا",
+        "vertical_title": "تواصل 24/7",
+        "popup_title": "الاتصال بالدعم",
+        "popup_description": "تواصل مع فريق دعم ترانسلينك للحصول على مساعدة الخبراء والإرشادات الفنية.",
+        "popup_tags": [
+          "الدعم",
+          "التواصل",
+          "التقنية",
+          "اتصال"
+        ]
+      }
+    },
+    "waypoints": {
+      "fuel-head": {
+        "title": "رأس المستشعر",
+        "subtitle": "تتبع دقيق",
+        "description": "تتبع بمستوى عسكري عبر أنظمة الملاحة العالمية وبدقة تقل عن المتر. رؤية على مدار الساعة وتحديد جغرافي.",
+        "stats": [
+          "أقل من متر",
+          "24/7",
+          "عالمي"
+        ]
+      },
+      "harness": {
+        "title": "مجموعة الأسلاك",
+        "subtitle": "اتصال آمن",
+        "description": "مجموعة أسلاك محمية صناعياً للبيئات القاسية. تقارير تشخيصية في الوقت الفعلي.",
+        "stats": [
+          "IP69K",
+          "فولاذ مقاوم للصدأ",
+          "محمي"
+        ]
+      },
+      "base-mount": {
+        "title": "قاعدة التثبيت",
+        "subtitle": "نظام الفلانج",
+        "description": "فلانج ألومنيوم عالي المتانة بنمط تثبيت عالمي لجميع أنواع الخزانات.",
+        "stats": [
+          "AL-6061",
+          "عالمي",
+          "حاصل على براءة اختراع"
+        ]
+      },
+      "precision-tracking": {
+        "title": "مسبار دقيق",
+        "subtitle": "استشعار سعوي",
+        "description": "مسبار صلب بدون أجزاء متحركة. كشف مستوى فائق الدقة عبر جميع التضاريس.",
+        "stats": [
+          "±0.1%",
+          "حالة صلبة",
+          "مؤكسد"
+        ]
+      },
+      "iot-sensor": {
+        "title": "وحدة إنترنت الأشياء",
+        "subtitle": "مدمج بذكاء اصطناعي للحافة",
+        "description": "وحدات معالجة مدمجة تحوّل بيانات القياس عن بعد إلى رؤى عملية لإدارة الأسطول.",
+        "stats": [
+          "CORTEX-M4",
+          "LTE-M1",
+          "BLE 5.0"
+        ]
+      },
+      "vision-ai": {
+        "title": "رؤية الذكاء الاصطناعي",
+        "subtitle": "ADAS و DMS",
+        "description": "كاميرات ذكاء اصطناعي ثنائية البث. منع التصادم، كشف التعب، وتدريب السائق داخل الكابينة.",
+        "stats": [
+          "1080P",
+          "ثنائي الذكاء الاصطناعي",
+          "مباشر"
+        ]
+      },
+      "contact": {
+        "title": "اتصل بنا",
+        "subtitle": "ابدأ الآن",
+        "description": "تواصل مع فريقنا لتحويل بيانات أسطولك إلى ميزة تنافسية.",
+        "stats": [
+          "+251 944-33-4344",
+          "hello@translink.et"
+        ]
+      },
+      "visit-us": {
+        "title": "تفضل بزيارتنا",
+        "subtitle": "أديس أبابا",
+        "description": "كيرا، مبنى SD، مكتب 404",
+        "stats": []
+      },
+      "security-bolt": {
+        "title": "برغي الأمان",
+        "subtitle": "نظام التثبيت",
+        "description": "برغي أمان عالي الشد يثبت ويحكم مستشعر مستوى الوقود في الخزان عبر لوحة القاعدة، مما يضمن ختماً مقاوماً للتلاعب.",
+        "stats": [
+          "أمان",
+          "مقاوم للتلاعب",
+          "فولاذ مقاوم للصدأ"
+        ]
+      },
+      "precision-filter": {
+        "title": "فلتر دقيق",
+        "subtitle": "ترشيح متقدم",
+        "description": "فلتر مدمج عالي الأداء يحمي المسبار السعوي من الملوثات والرواسب، مما يضمن قراءات بالغة الدقة.",
+        "stats": [
+          "متعدد المراحل",
+          "خالٍ من الرواسب",
+          "وقائي"
+        ]
+      }
+    }
+  }
+}

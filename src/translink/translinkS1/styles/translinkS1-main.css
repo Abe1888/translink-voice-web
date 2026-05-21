@@ -1,0 +1,38 @@
+@import '../../styles/translink-shared.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.translink-s1-app {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Local Utilities */
+.nav-indicator-line {
+    width: 2px;
+    height: 100%;
+    position: relative;
+}
+
+.nav-indicator-active {
+    width: 4px;
+    height: 40px;
+    position: absolute;
+    left: -1px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#three-canvas-container {
+    transition: all 0.3s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}

@@ -1,0 +1,104 @@
+{
+    "defaults": {
+        "wireframe": false,
+        "transparent": false,
+        "opacity": 1.0,
+        "visible": null,
+        "castShadow": true,
+        "receiveShadow": true,
+        "overrideAnimation": false,
+        "threshold": 15
+    },
+    "meshes": {
+        "Fuel_tank": {},
+        "Belt": {},
+        "Fuel_Head": {
+            "visible": true
+        },
+        "Fuel_Head_cover": {
+            "wireframe": false,
+            "transparent": false,
+            "opacity": 1.0,
+            "visible": true
+        },
+        "Prob": {
+            "visible": true
+        },
+        "Harness": {
+            "visible": true
+        },
+        "Filter": {
+            "visible": true
+        },
+        "Filter_Wireframe": {
+            "visible": false
+        },
+        "Base": {
+            "visible": true
+        },
+        "Bolt_01": {
+            "visible": false
+        },
+        "Bolt_02": {
+            "visible": false
+        },
+        "Bolt_03": {
+            "visible": false
+        },
+        "Bolt_04": {
+            "visible": false
+        },
+        "light": {
+            "visible": false
+        },
+        "Fuel_Head_Ref_Point_003": {
+            "visible": false
+        },
+        "Filter_Ref_Point_006": {
+            "visible": false
+        },
+        "Bolt_Ref_Point_002": {
+            "visible": false
+        },
+        "Base_Ref_Point_004": {
+            "visible": false
+        },
+        "Prob_Ref_Point_005": {
+            "visible": false
+        },
+        "Harness_Ref_Point_01": {
+            "visible": false
+        },
+        "Logo_Translink_pro": {
+            "visible": true,
+            "overrideAnimation": true
+        },
+        "Text_Translink_pro": {
+            "visible": true,
+            "overrideAnimation": true
+        },
+        "virtual_studio": {},
+        "virtual_studio_Ground_Spline_Circle_collisions": {
+            "visible": false
+        },
+        "Ground_point": {
+            "visible": false
+        },
+        "Wall_point": {
+            "visible": false
+        },
+        "Truck": {},
+        "Truck_Lights": {},
+        "LOGO": {
+            "visible": false
+        },
+        "Cab_Glass": {},
+        "Cab_door": {},
+        "Cab_door_glass": {},
+        "Cab_Door_glass_frame": {},
+        "axle001_Front_wheel_Left": {},
+        "axle001_Front_wheel_Right": {},
+        "axle002_wheel_Both_Left_Right": {},
+        "axle003_wheel_Both_Left_Right": {}
+    }
+}

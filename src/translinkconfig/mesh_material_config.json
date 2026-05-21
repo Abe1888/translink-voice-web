@@ -1,0 +1,127 @@
+{
+    "materials": {
+        "bolt": {
+            "color": "#2a2a2a",
+            "metalness": 0.8,
+            "roughness": 0.4,
+            "envMapIntensity": 0.2
+        },
+        "belt": {
+            "color": "#1a1a1a",
+            "metalness": 0.8,
+            "roughness": 0.4,
+            "envMapIntensity": 0.2
+        },
+        "fuelTank": {
+            "color": "#d1d5db",
+            "metalness": 0.95,
+            "roughness": 0.38,
+            "envMapIntensity": 0.3
+        },
+        "light": {
+            "color": "#c0202f",
+            "metalness": 0.0,
+            "roughness": 0.15,
+            "clearcoat": 0.8,
+            "transmission": 0.6,
+            "ior": 1.45,
+            "envMapIntensity": 0.2
+        },
+        "fuelHead": {
+            "color": "#161616",
+            "metalness": 0.4,
+            "roughness": 0.35,
+            "envMapIntensity": 1.2,
+            "clearcoat": 0.6,
+            "clearcoatRoughness": 0.1
+        },
+        "harness": {
+            "color": "#161616",
+            "metalness": 0.2,
+            "roughness": 0.4,
+            "envMapIntensity": 0.5
+        },
+        "prob": {
+            "color": "#fafafa",
+            "metalness": 0.95,
+            "roughness": 0.1,
+            "envMapIntensity": 1.0
+        },
+        "base": {
+            "color": "#2a2a2a",
+            "metalness": 0.8,
+            "roughness": 0.4,
+            "envMapIntensity": 0.2
+        },
+        "filter": {
+            "color": "#e8ecf1",
+            "metalness": 0.2,
+            "roughness": 0.5,
+            "envMapIntensity": 0.8
+        },
+        "fuelHeadCover": {
+            "color": "#c0202f",
+            "metalness": 0.0,
+            "roughness": 0.72,
+            "envMapIntensity": 0.35,
+            "clearcoat": 0.1,
+            "clearcoatRoughness": 0.35
+        },
+        "brandLogo": {
+            "color": "#ffffff",
+            "metalness": 0.0,
+            "roughness": 0.6,
+            "envMapIntensity": 0.1,
+            "emissive": "#ffffff",
+            "emissiveIntensity": 0.8,
+            "polygonOffset": true,
+            "polygonOffsetFactor": -1,
+            "polygonOffsetUnits": -1
+        },
+        "virtualStudio": {
+            "color": "#f5f1e8",
+            "roughness": 1.0,
+            "metalness": 0.0,
+            "clearcoat": 0.0,
+            "clearcoatRoughness": 0.0,
+            "envMapIntensity": 0.1
+        },
+        "truckBody": {
+            "color": "#d8d4d0",
+            "metalness": 0.0,
+            "roughness": 0.95,
+            "envMapIntensity": 0.2,
+            "clearcoat": 1.0,
+            "clearcoatRoughness": 0.05
+        },
+        "truckTires": {
+            "color": "#1a1a1a",
+            "metalness": 0.0,
+            "roughness": 0.9,
+            "envMapIntensity": 0.1
+        },
+        "truckWheels": {
+            "color": "#444444",
+            "metalness": 0.8,
+            "roughness": 0.4,
+            "envMapIntensity": 0.3
+        },
+        "truckGlass": {
+            "color": "#ffffff",
+            "metalness": 0.0,
+            "roughness": 0.05,
+            "transmission": 0.95,
+            "ior": 1.5,
+            "envMapIntensity": 1.0,
+            "opacity": 0.3,
+            "transparent": true
+        },
+        "truckLights": {
+            "color": "#cc272e",
+            "metalness": 0.8,
+            "roughness": 0.3,
+            "emissive": "#cc272e",
+            "emissiveIntensity": 0.3
+        }
+    }
+}

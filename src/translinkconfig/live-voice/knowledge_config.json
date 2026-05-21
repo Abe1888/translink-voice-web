@@ -1,0 +1,75 @@
+{
+  "sync_engine": {
+    "enabled": true,
+    "sync_mode": "polling",
+    "polling_interval_hours": 24,
+    "target_domains": [
+      "https://translinket.com",
+      "https://tracking.translinket.com",
+      "https://fms.translinket.com"
+    ],
+    "crawl_depth": 3,
+    "respect_robots_txt": true
+  },
+  "chunking_rules": {
+    "target_chunk_size_tokens": 500,
+    "min_chunk_size_tokens": 200,
+    "max_chunk_size_tokens": 800,
+    "overlap_percentage": 20,
+    "semantic_boundaries": ["paragraph", "H2", "H3"]
+  },
+  "knowledge_sources": [
+    {
+      "id": "TL-CORE-001",
+      "file": "knowledge.md",
+      "type": "markdown",
+      "enabled": true,
+      "priority": "high"
+    },
+    {
+      "id": "TL-FAQ-002",
+      "file": "sources.txt",
+      "type": "text",
+      "enabled": true,
+      "priority": "medium"
+    }
+  ],
+  "taxonomy_and_tagging": {
+    "domains": [
+      "telematics", 
+      "fleet-management", 
+      "fuel-monitoring", 
+      "freight-security", 
+      "navigation-dispatching", 
+      "support", 
+      "company", 
+      "developer/API"
+    ],
+    "audiences": [
+      "admin", 
+      "operator", 
+      "driver", 
+      "integrator", 
+      "customer-support"
+    ],
+    "intents": [
+      "how-to", 
+      "troubleshooting", 
+      "product-info", 
+      "sales", 
+      "legal"
+    ]
+  },
+  "retrieval_policies": {
+    "vector_dimensions": 1536,
+    "freshness_boost_days": 7,
+    "max_retrieved_chunks": 5,
+    "include_citations": true
+  },
+  "memory_tiers": {
+    "session_memory_messages": 5,
+    "short_term_memory_days": 30,
+    "long_term_memory": "indefinite",
+    "pii_redaction_enabled": true
+  }
+}

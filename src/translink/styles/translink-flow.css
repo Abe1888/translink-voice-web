@@ -1,0 +1,876 @@
+@font-face {
+  font-family: 'Phosphor';
+  src: url('/fonts/Phosphor.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Phosphor';
+  src: url('/fonts/Phosphor-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 
+  Translink Flow Overlays
+  This file handles specific 3D scene waypoint and CSS2D label styling.
+  All global design tokens are inherited from translink-shared.css.
+*/
+
+:root {
+  /* Logo positioning - Centered above vertical TRANSLINK title */
+  --logo-left-offset: 1%;
+  --logo-top-offset: 1.5vh;
+  --logo-width: 15vw;
+  --logo-max-width: 175px;
+  --logo-min-width: 100px;
+}
+
+/* Responsive logo positioning */
+@media (max-width: 1280px) {
+  :root {
+    --logo-left-offset: 1%;
+    --logo-top-offset: 1.5vh;
+    --logo-width: 16vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --logo-width: 11vw;
+    --logo-max-width: 80px;
+    --logo-min-width: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    /* Fit perfectly inside the 11% sidebar without bleeding */
+    --logo-width: 9vw;
+    --logo-max-width: 45px;
+    --logo-min-width: 30px;
+  }
+}
+
+.syncopate {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Phosphor';
+  font-weight: bold;
+}
+
+.canvas-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 100);
+  z-index: 50;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.logo-svg {
+  width: var(--logo-width, 15vw);
+  max-width: var(--logo-max-width, 175px);
+  min-width: var(--logo-min-width, 100px);
+}
+
+/* Sections: transparent background to show 3D scene */
+section {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+  background: transparent;
+}
+
+/* Section Height Registry: Syncs with GSAP ScrollTrigger and 3D Waypoints */
+#s1,
+#s2,
+#s3,
+#s4,
+#s6,
+#s7,
+#s8,
+#s9,
+#s1-clone {
+  height: calc(var(--vh, 1vh) * 100) !important;
+}
+
+#s5 {
+  height: calc(var(--vh, 1vh) * 400) !important;
+}
+
+#s10 {
+  height: calc(var(--vh, 1vh) * 300) !important;
+  display: flex !important;
+  flex-direction: column;
+}
+
+/* Use block to allow sticky child to start at top */
+
+/* Ensure content stays above 3D canvas */
+section .container {
+  position: relative;
+  z-index: 20;
+}
+
+section .glass-card {
+  position: relative;
+  z-index: 25;
+  isolation: isolate;
+}
+
+/* Glass card base styles */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: var(--glass-padding, 3rem);
+  border-radius: 0;
+  box-shadow: none !important;
+  filter: none !important;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  will-change: transform;
+}
+
+/* Fluid typography with clamp */
+.hero-title-fluid {
+  font-size: clamp(3rem, 8vw, 12rem);
+}
+
+.section-title-fluid {
+  font-size: clamp(2rem, 5vw, 6rem);
+}
+
+/* Light section mode for nav dots */
+body.light-mode .split-text .char {
+  color: var(--brand-obsidian);
+}
+
+/* Text color transitions */
+body {
+  transition: color 0.5s ease;
+}
+
+.glass-card {
+  transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+.char {
+  display: inline-block;
+  white-space: pre;
+}
+
+.hover-trigger {
+  cursor: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ========================================
+ * TOUCH-OPTIMIZED UI
+ * ======================================== */
+
+/* Minimum 44x44px touch targets for mobile */
+@media (max-width: 1023px) {
+
+  button,
+  a[href] {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Touch feedback - scale down on active */
+@media (hover: none) and (pointer: coarse) {
+
+  button:active,
+  a:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+  }
+
+  /* Prevent text selection on touch */
+  body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Allow text selection in content areas */
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+  }
+}
+
+/* ========================================
+ * COLOR CONTRAST FIXES (WCAG 4.5:1)
+ * ======================================== */
+
+/* Improve contrast for text-white/50 to text-white/70 */
+.text-white\/50 {
+  color: rgba(252, 252, 252, 0.7) !important;
+}
+
+/* Improve contrast for text-white/40 to text-white/65 */
+.text-white\/40 {
+  color: rgba(252, 252, 252, 0.65) !important;
+}
+
+/* Improve contrast for text-white/30 to text-white/60 */
+.text-white\/30 {
+  color: rgba(252, 252, 252, 0.6) !important;
+}
+
+/* Light mode contrast improvements */
+body.light-mode .text-white\/50,
+body.light-mode .text-white\/40,
+body.light-mode .text-white\/30 {
+  color: rgba(26, 26, 26, 0.75) !important;
+}
+
+/* Ensure footer text has sufficient contrast */
+#s8-footer .text-\[9px\] {
+  color: rgba(252, 252, 252, 0.9) !important;
+}
+
+/* Improve nav dots contrast */
+.nav-dots .dot {
+  background: rgba(252, 252, 252, 0.25);
+}
+
+.nav-dots .dot.active {
+  background: #c0202f;
+}
+
+body.light-mode .nav-dots .dot {
+  background: rgba(26, 26, 26, 0.25);
+}
+
+body.light-mode .nav-dots .dot.active {
+  background: #c0202f;
+}
+
+/* ========================================
+ * WAYPOINT OVERLAYS (Vision.html style)
+ * ======================================== */
+
+.waypoint-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+  will-change: transform, opacity;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 100;
+}
+
+.waypoint-overlay.active {
+  pointer-events: auto;
+}
+
+.waypoint-pulse {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+}
+
+.waypoint-ring {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--brand-crimson);
+  border-radius: 50%;
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Old pulse animation system - triple expanding rings + rotating tech ring */
+@keyframes pulse-wave {
+  0% {
+    width: 14px;
+    height: 14px;
+    opacity: 0.8;
+  }
+
+  100% {
+    width: 120px;
+    height: 120px;
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+@keyframes ring-rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.overlay-dot-enhanced {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.pulse-ring-wave {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 1px solid var(--ring-color, rgba(204, 39, 46, 0.4));
+  transform: translate(-50%, -50%);
+  animation: pulse-wave 2.5s ease-out infinite;
+  pointer-events: none;
+}
+
+.tech-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  border: 1px dashed var(--ring-color, rgba(204, 39, 46, 0.25));
+  border-radius: 50%;
+  animation: ring-rotate 8s linear infinite;
+  pointer-events: none;
+}
+
+.waypoint-card {
+  position: absolute;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  min-width: clamp(140px, 20vw, 180px);
+  max-width: clamp(180px, 25vw, 220px);
+  box-shadow: none;
+}
+
+.waypoint-card-inner {
+  position: relative;
+}
+
+.waypoint-card-title {
+  font-size: clamp(11px, 1.4vw, 14px);
+  font-weight: 700;
+  color: var(--brand-white);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: clamp(0.25rem, 0.5vw, 0.4rem);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Phosphor';
+  text-shadow: none;
+  line-height: 1.3;
+  transition: color 0.5s ease;
+}
+
+.waypoint-card-subtitle {
+  font-size: clamp(7px, 0.9vw, 9px);
+  font-weight: 600;
+  color: var(--brand-crimson);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: clamp(0.5rem, 1vw, 0.75rem);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Phosphor';
+  text-shadow: none;
+  line-height: 1.2;
+  transition: color 0.5s ease;
+}
+
+.waypoint-card-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--brand-white);
+  opacity: 0.3;
+  margin-bottom: clamp(0.5rem, 1vw, 0.75rem);
+  box-shadow: none;
+  transition: background 0.5s ease;
+}
+
+.waypoint-card-desc {
+  font-size: clamp(9px, 1.1vw, 11px);
+  line-height: 1.6;
+  color: var(--brand-white);
+  opacity: 0.8;
+  margin-bottom: clamp(0.75rem, 1.2vw, 1rem);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Phosphor';
+  text-shadow: none;
+  font-weight: 400;
+  transition: color 0.5s ease;
+  white-space: pre-line;
+}
+
+.waypoint-card-coord {
+  display: flex;
+  gap: clamp(0.5rem, 1vw, 0.75rem);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.waypoint-coord-item {
+  font-size: clamp(8px, 1vw, 10px);
+  font-weight: 700;
+  color: var(--brand-crimson);
+  letter-spacing: 0.06em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Phosphor';
+  text-shadow: none;
+  white-space: nowrap;
+  transition: color 0.5s ease;
+}
+
+.waypoint-path {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.waypoint-endpoint {
+  opacity: 0;
+}
+
+/* Responsive adjustments for waypoint overlays */
+@media (max-width: 1024px) {
+  .waypoint-card {
+    min-width: clamp(120px, 25vw, 160px);
+    max-width: clamp(160px, 30vw, 200px);
+  }
+
+  .waypoint-card-title {
+    font-size: clamp(10px, 2vw, 13px);
+    letter-spacing: 0.1em;
+  }
+
+  .waypoint-card-subtitle {
+    font-size: clamp(6px, 1.2vw, 8px);
+  }
+
+  .waypoint-card-desc {
+    font-size: clamp(8px, 1.5vw, 10px);
+    line-height: 1.5;
+  }
+
+  .waypoint-coord-item {
+    font-size: clamp(7px, 1.3vw, 9px);
+  }
+}
+
+@media (max-width: 768px) {
+  .waypoint-card {
+    min-width: clamp(160px, 45vw, 220px);
+    max-width: clamp(220px, 55vw, 280px);
+  }
+
+  .waypoint-card-title {
+    font-size: clamp(9px, 2.5vw, 12px);
+    margin-bottom: 0.25rem;
+  }
+
+  .waypoint-card-subtitle {
+    font-size: clamp(6px, 1.5vw, 7px);
+    margin-bottom: 0.4rem;
+  }
+
+  .waypoint-card-divider {
+    margin-bottom: 0.4rem;
+  }
+
+  .waypoint-card-desc {
+    font-size: clamp(7px, 2vw, 9px);
+    margin-bottom: 0.6rem;
+  }
+
+  .waypoint-card-coord {
+    gap: 0.4rem;
+  }
+
+  .waypoint-coord-item {
+    font-size: clamp(6px, 1.8vw, 8px);
+  }
+
+  .waypoint-pulse {
+    width: 14px;
+    height: 14px;
+  }
+
+  .waypoint-ring {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .waypoint-card {
+    min-width: clamp(140px, 50vw, 180px);
+    max-width: clamp(180px, 60vw, 220px);
+  }
+
+  .waypoint-card-title {
+    font-size: clamp(8px, 3vw, 11px);
+  }
+
+  .waypoint-card-subtitle {
+    font-size: clamp(5px, 2vw, 7px);
+  }
+
+  .waypoint-card-desc {
+    font-size: clamp(7px, 2.5vw, 8px);
+  }
+
+  .waypoint-coord-item {
+    font-size: clamp(6px, 2.2vw, 7px);
+  }
+
+  .waypoint-pulse {
+    width: 12px;
+    height: 12px;
+  }
+
+  .waypoint-ring {
+    width: 12px;
+    height: 12px;
+    border-width: 1.5px;
+  }
+}
+
+/* ========================================
+ * CSS2D LABEL SYSTEM (CSS2DRenderer)
+ * Precise auto-labels anchored to GLB ref points
+ * ======================================== */
+
+/* Renderer layer — managed by UIOverlay.ts */
+#css2d-label-layer {
+  pointer-events: none !important;
+}
+
+#css2d-label-layer>div {
+  pointer-events: none !important;
+}
+
+/* Each label root — CSS2DRenderer applies translate(-50%,-50%) to center it.
+ * With width:0 height:0, that transform becomes 0. So (0,0) = exact 3D anchor.
+ * All children are positioned absolutely from this precise point. */
+.css2d-wp {
+  position: relative;
+  width: 0;
+  height: 0;
+  overflow: visible;
+  pointer-events: none;
+  will-change: opacity, transform;
+}
+
+/* Anchor dot — centered on (0,0) = exact 3D ref point */
+.css2d-wp-dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background: var(--theme-wp-dot);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  transition: background-color 0.5s ease;
+}
+
+/* Expanding pulse ring — perfectly centered on its parent dot or origin */
+.css2d-wp-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  border: 1.5px solid var(--theme-wp-title);
+  opacity: 0.3;
+  transform: translate(-50%, -50%);
+  animation: css2d-pulse 2.2s ease-out infinite;
+  pointer-events: none;
+  transition: border-color 0.5s ease;
+}
+
+@keyframes css2d-pulse {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.8;
+  }
+
+  100% {
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+  }
+}
+
+/* SVG connector — originates from (0,0) = anchor point */
+.css2d-wp-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Card — Floating (No Background/Gap) */
+.css2d-wp-card {
+  position: absolute;
+  background: var(--theme-wp-bg);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: fit-content;
+  min-width: 0;
+  max-width: clamp(220px, 25vw, 320px);
+  pointer-events: auto;
+  z-index: 3;
+}
+
+.css2d-wp-title {
+  font-size: clamp(14px, 1.8vw, 18px);
+  font-weight: 800;
+  color: var(--theme-wp-title);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0 0 0.1rem 0 !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Phosphor';
+  font-weight: bold;
+  line-height: 1.1;
+  white-space: nowrap;
+  /* text-shadow: none; */
+  /* Neutralize letter-spacing on the last character for 0 gap */
+  margin-right: -0.15em !important;
+  transition: color 0.5s ease;
+}
+
+.css2d-wp-subtitle {
+  font-size: clamp(8px, 1vw, 11px);
+  font-weight: 600;
+  color: var(--theme-wp-subtitle);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 0 0.5rem 0 !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Phosphor';
+  line-height: 1.1;
+  white-space: nowrap;
+  margin-right: -0.14em !important;
+  transition: color 0.5s ease;
+}
+
+.css2d-wp-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--brand-white);
+  opacity: 0.2;
+  margin-bottom: clamp(0.5rem, 0.8vw, 0.75rem);
+  transition: background 0.5s ease;
+}
+
+.css2d-wp-desc {
+  font-size: clamp(10px, 1.2vw, 13px);
+  line-height: 1.6;
+  color: var(--theme-wp-body);
+  opacity: 0.8;
+  margin: 0 0 0.8rem 0 !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Phosphor';
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  transition: color 0.5s ease;
+}
+
+.css2d-wp-stats {
+  display: flex;
+  gap: clamp(0.5rem, 0.8vw, 0.75rem);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.css2d-wp-stat {
+  font-size: clamp(8px, 0.9vw, 10px);
+  font-weight: 700;
+  color: #ffffff;
+  background: var(--brand-crimson);
+  padding: 0.3rem 0.6rem;
+  border-radius: 2px;
+  letter-spacing: 0.1em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Phosphor';
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: all 0.4s var(--easing-standard);
+  display: inline-block;
+  box-shadow: none;
+  animation: badge-reveal 0.5s var(--easing-standard) forwards;
+}
+
+@keyframes badge-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Contact photo row */
+.css2d-wp-photo-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.css2d-wp-photo {
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--brand-crimson);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* ── Responsive: Tablet ───────────────────────────── */
+@media (max-width: 1024px) {
+  .css2d-wp-card {
+    min-width: clamp(100px, 18vw, 130px);
+    max-width: clamp(130px, 22vw, 160px);
+  }
+
+  .css2d-wp-title {
+    font-size: clamp(8px, 1.5vw, 11px);
+  }
+
+  .css2d-wp-subtitle {
+    font-size: clamp(5px, 1vw, 7px);
+  }
+
+  .css2d-wp-desc {
+    font-size: clamp(6px, 1.2vw, 8px);
+  }
+
+  .css2d-wp-stat {
+    font-size: clamp(5px, 1vw, 7px);
+  }
+}
+
+/* ── Responsive: Mobile ───────────────────────────── */
+@media (max-width: 768px) {
+  .css2d-wp-card {
+    min-width: clamp(120px, 30vw, 160px);
+    max-width: clamp(180px, 45vw, 220px);
+  }
+
+  .css2d-wp-dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .css2d-wp-ring {
+    animation-duration: 2.5s;
+  }
+
+  .css2d-wp-title {
+    font-size: clamp(7px, 2vw, 10px);
+  }
+
+  .css2d-wp-subtitle {
+    font-size: clamp(5px, 1.3vw, 6px);
+  }
+
+  .css2d-wp-desc {
+    font-size: clamp(6px, 1.5vw, 7px);
+    line-height: 1.4;
+  }
+
+  .css2d-wp-stat {
+    font-size: clamp(5px, 1.3vw, 6px);
+  }
+
+  .css2d-wp-photo {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* ── Responsive: Small Mobile ─────────────────────── */
+@media (max-width: 480px) {
+  .css2d-wp-card {
+    min-width: clamp(120px, 40vw, 160px);
+    max-width: clamp(180px, 50vw, 200px);
+  }
+
+  .css2d-wp-dot {
+    width: 4px;
+    height: 4px;
+  }
+
+  .css2d-wp-title {
+    font-size: clamp(6px, 2.5vw, 9px);
+  }
+
+  .css2d-wp-desc {
+    font-size: clamp(5px, 2vw, 7px);
+  }
+
+  .css2d-wp-photo {
+    width: 24px;
+    height: 24px;
+  }
+}

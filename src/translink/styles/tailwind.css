@@ -1,0 +1,77 @@
+@import "./translink-shared.css";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* 
+  Tailwind entry point for Translink.
+  All design tokens are managed in translink-shared.css.
+*/
+
+@layer base {
+  html,
+  body {
+    background-color: #f5f1e8;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@layer components {
+  /* Legacy Glass Card */
+  .glass-card {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    border-radius: 4px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    will-change: transform;
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+  }
+
+  /* Vision button */
+  .vision-btn {
+    position: fixed;
+    right: 3rem;
+    top: 50%;
+    transform: translateY(calc(-50% + 320px)) rotate(-90deg);
+    transform-origin: center;
+    z-index: var(--z-vision-btn);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .vision-btn:hover {
+    background: rgba(var(--brand-crimson-rgb), 0.15);
+    border-color: var(--brand-crimson);
+    transform: translateY(calc(-50% + 320px)) rotate(-90deg) translateX(-4px);
+  }
+}
+
+/* .char is defined in translink-flow.css — no duplicate needed here */
+
+/* Mobile responsive adjustments */
+@media (max-width: 767px) {
+  body {
+    cursor: auto !important;
+  }
+  
+  #cursor-dot, #cursor-ring {
+    display: none !important;
+  }
+
+  .vision-btn {
+    right: 1rem;
+    transform: translateY(calc(-50% + 240px)) rotate(-90deg);
+  }
+}

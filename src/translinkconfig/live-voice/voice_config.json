@@ -1,0 +1,229 @@
+{
+  "voiceMetadata": {
+    "Aoede": {
+      "gender": "Woman",
+      "tone": "Soft, warm, and natural"
+    },
+    "Charon": {
+      "gender": "Man",
+      "tone": "Deep sound, authoritative, and professional"
+    },
+    "Fenrir": {
+      "gender": "Man",
+      "tone": "Bright, energetic, and confident"
+    },
+    "Kore": {
+      "gender": "Woman",
+      "tone": "Clear, articulate, and formal"
+    },
+    "Puck": {
+      "gender": "Man",
+      "tone": "Warm, engaging, and friendly"
+    },
+    "Achernar": {
+      "gender": "Man",
+      "tone": "Deep sound, resonant"
+    },
+    "Achird": {
+      "gender": "Woman",
+      "tone": "Soft, calm"
+    },
+    "Algieba": {
+      "gender": "Man",
+      "tone": "Strong, clear"
+    },
+    "Algenib": {
+      "gender": "Woman",
+      "tone": "Bright, professional"
+    },
+    "Alnilam": {
+      "gender": "Man",
+      "tone": "Deep sound, slow"
+    },
+    "Autonoe": {
+      "gender": "Woman",
+      "tone": "Soft, soothing"
+    },
+    "Callirrhoe": {
+      "gender": "Woman",
+      "tone": "High pitch, energetic"
+    },
+    "Despina": {
+      "gender": "Woman",
+      "tone": "Clear, fast-paced"
+    },
+    "Enceladus": {
+      "gender": "Man",
+      "tone": "Deep sound, formal"
+    },
+    "Erinome": {
+      "gender": "Woman",
+      "tone": "Soft, confident, engaging"
+    },
+    "Gacrux": {
+      "gender": "Man",
+      "tone": "Rough, deep sound"
+    },
+    "Iapetus": {
+      "gender": "Man",
+      "tone": "Warm, mature"
+    },
+    "Laomedeia": {
+      "gender": "Woman",
+      "tone": "Soft, melodious"
+    },
+    "Leda": {
+      "gender": "Woman",
+      "tone": "Professional, articulate"
+    },
+    "Orus": {
+      "gender": "Man",
+      "tone": "Deep sound, confident"
+    },
+    "Pulcherrima": {
+      "gender": "Woman",
+      "tone": "Bright, clear"
+    },
+    "Rasalgethi": {
+      "gender": "Man",
+      "tone": "Strong, authoritative"
+    },
+    "Sadachbia": {
+      "gender": "Woman",
+      "tone": "Soft, warm"
+    },
+    "Sadaltager": {
+      "gender": "Man",
+      "tone": "Deep sound, resonant"
+    },
+    "Schedar": {
+      "gender": "Woman",
+      "tone": "Professional, calm"
+    },
+    "Sulafat": {
+      "gender": "Man",
+      "tone": "Warm, engaging"
+    },
+    "Umbriel": {
+      "gender": "Man",
+      "tone": "Deep sound, serious"
+    },
+    "Vindemiatrix": {
+      "gender": "Woman",
+      "tone": "Clear, energetic"
+    },
+    "Zephyr": {
+      "gender": "Woman",
+      "tone": "Soft, breathy, warm"
+    },
+    "Zubenelgenubi": {
+      "gender": "Man",
+      "tone": "Deep sound, authoritative"
+    }
+  },
+  "en": {
+    "activeVoice": "Alnilam",
+    "voices": {
+      "Achernar": 0,
+      "Achird": 0,
+      "Algieba": 0,
+      "Algenib": 0,
+      "Alnilam": 1,
+      "Aoede": 0,
+      "Autonoe": 0,
+      "Callirrhoe": 0,
+      "Charon": 0,
+      "Despina": 0,
+      "Enceladus": 0,
+      "Erinome": 0,
+      "Fenrir": 0,
+      "Gacrux": 0,
+      "Iapetus": 0,
+      "Kore": 0,
+      "Laomedeia": 0,
+      "Leda": 0,
+      "Orus": 0,
+      "Puck": 0,
+      "Pulcherrima": 0,
+      "Rasalgethi": 0,
+      "Sadachbia": 0,
+      "Sadaltager": 0,
+      "Schedar": 0,
+      "Sulafat": 0,
+      "Umbriel": 0,
+      "Vindemiatrix": 0,
+      "Zephyr": 0,
+      "Zubenelgenubi": 0
+    }
+  },
+  "am": {
+    "activeVoice": "Kore",
+    "voices": {
+      "Achernar": 0,
+      "Achird": 0,
+      "Algieba": 0,
+      "Algenib": 0,
+      "Alnilam": 0,
+      "Aoede": 0,
+      "Autonoe": 0,
+      "Callirrhoe": 0,
+      "Charon": 0,
+      "Despina": 0,
+      "Enceladus": 0,
+      "Erinome": 0,
+      "Fenrir": 0,
+      "Gacrux": 0,
+      "Iapetus": 0,
+      "Kore": 1,
+      "Laomedeia": 0,
+      "Leda": 0,
+      "Orus": 0,
+      "Puck": 0,
+      "Pulcherrima": 0,
+      "Rasalgethi": 0,
+      "Sadachbia": 0,
+      "Sadaltager": 0,
+      "Schedar": 0,
+      "Sulafat": 0,
+      "Umbriel": 0,
+      "Vindemiatrix": 0,
+      "Zephyr": 0,
+      "Zubenelgenubi": 0
+    }
+  },
+  "ar": {
+    "activeVoice": "Aoede",
+    "voices": {
+      "Achernar": 0,
+      "Achird": 0,
+      "Algieba": 0,
+      "Algenib": 0,
+      "Alnilam": 0,
+      "Aoede": 1,
+      "Autonoe": 0,
+      "Callirrhoe": 0,
+      "Charon": 0,
+      "Despina": 0,
+      "Enceladus": 0,
+      "Erinome": 0,
+      "Fenrir": 0,
+      "Gacrux": 0,
+      "Iapetus": 0,
+      "Kore": 0,
+      "Laomedeia": 0,
+      "Leda": 0,
+      "Orus": 0,
+      "Puck": 0,
+      "Pulcherrima": 0,
+      "Rasalgethi": 0,
+      "Sadachbia": 0,
+      "Sadaltager": 0,
+      "Schedar": 0,
+      "Sulafat": 0,
+      "Umbriel": 0,
+      "Vindemiatrix": 0,
+      "Zephyr": 0,
+      "Zubenelgenubi": 0
+    }
+  }
+}

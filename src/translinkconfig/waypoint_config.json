@@ -1,0 +1,183 @@
+{
+  "waypoints": [
+    {
+      "id": "fuel-head",
+      "refPointName": "Fuel_Head_Ref_Point_003",
+      "position": {
+        "x": -0.2382,
+        "y": 0.923,
+        "z": 0.0987
+      },
+      "scrollStart": 0.14,
+      "scrollEnd": 0.22,
+      "content": {
+        "title": "SENSOR HEAD",
+        "subtitle": "PRECISION TRACKING",
+        "description": "Military-grade GNSS tracking with sub-meter accuracy. 24/7 visibility and geofencing.",
+        "stats": [
+          "SUB-METER",
+          "24/7",
+          "GLOBAL"
+        ]
+      },
+      "styling": {
+        "forceDirection": "left"
+      }
+    },
+    {
+      "id": "harness",
+      "refPointName": "Harness_Ref_Point_01",
+      "position": {
+        "x": 0.0082,
+        "y": 0.9229,
+        "z": 0.035
+      },
+      "scrollStart": 0.24,
+      "scrollEnd": 0.32,
+      "content": {
+        "title": "WIRING HARNESS",
+        "subtitle": "SECURE CONNECTIVITY",
+        "description": "Industrial-shielded harness for harsh environments. Real-time diagnostic reporting.",
+        "stats": [
+          "IP69K",
+          "STAINLESS",
+          "SHIELDED"
+        ]
+      },
+      "styling": {
+        "forceDirection": "left"
+      }
+    },
+    {
+      "id": "base-mount",
+      "refPointName": "Base_Ref_Point_004",
+      "position": {
+        "x": -0.3128,
+        "y": 0.708,
+        "z": 0.0906
+      },
+      "scrollStart": 0.40,
+      "scrollEnd": 0.50,
+      "content": {
+        "title": "MOUNTING BASE",
+        "subtitle": "FLANGE SYSTEM",
+        "description": "High-durability aluminum flange with universal mounting pattern for all tank types.",
+        "stats": [
+          "AL-6061",
+          "UNIVERSAL",
+          "PATENTED"
+        ]
+      }
+    },
+    {
+      "id": "precision-tracking",
+      "refPointName": "Base_Ref_Point_004",
+      "position": {
+        "x": -0.3128,
+        "y": 0.708,
+        "z": 0.0906
+      },
+      "scrollStart": 0.55,
+      "scrollEnd": 0.65,
+      "content": {
+        "title": "PRECISION PROBE",
+        "subtitle": "CAPACITIVE SENSING",
+        "description": "Solid-state probe with no moving parts. Ultra-precise level detection across all terrain.",
+        "stats": [
+          "Â±0.1%",
+          "SOLID-STATE",
+          "ANODIZED"
+        ]
+      }
+    },
+    {
+      "id": "precision-filter",
+      "refPointName": "Filter_Ref_Point_006",
+      "position": {
+        "x": -0.26,
+        "y": 0.2629,
+        "z": 0.0713
+      },
+      "scrollStart": 0.68,
+      "scrollEnd": 0.82,
+      "content": {
+        "title": "PRECISION FILTER",
+        "subtitle": "ADVANCED FILTRATION",
+        "description": "Integrated high-performance filter that protects the capacitive probe from contaminants and sediment within the fuel tank, ensuring ultra-accurate fuel level readings.",
+        "stats": [
+          "MULTI-STAGE",
+          "SEDIMENT-FREE",
+          "PROTECTIVE"
+        ]
+      }
+    },
+    {
+      "id": "security-bolt",
+      "refPointName": "Bolt_Ref_Point_002",
+      "position": {
+        "x": -0.3167,
+        "y": 1.042,
+        "z": -0.02
+      },
+      "scrollStart": 0.81,
+      "scrollEnd": 0.86,
+      "content": {
+        "title": "SECURITY BOLT",
+        "subtitle": "FASTENING SYSTEM",
+        "description": "High-tensile security bolt that securely fastens and tightens the fuel level sensor to the tank via the base plate, ensuring a tamper-proof seal.",
+        "stats": [
+          "SECURITY",
+          "TAMPER-PROOF",
+          "STAINLESS"
+        ]
+      },
+      "styling": {
+        "forceDirection": "left"
+      }
+    },
+    {
+      "id": "contact",
+      "refPointName": "Fuel_Head_Ref_Point_003",
+      "position": {
+        "x": -0.2382,
+        "y": 0.923,
+        "z": 0.0987
+      },
+      "scrollStart": 0.92,
+      "scrollEnd": 0.96,
+      "content": {
+        "title": "CONTACT US",
+        "subtitle": "GET STARTED",
+        "image": "./textures/ui/contact-placeholder.png",
+        "description": "Connect with our team to transform your fleet data into a competitive advantage.",
+        "stats": [
+          "+251 944-33-4344",
+          "hello@translink.et"
+        ]
+      },
+      "styling": {
+        "forceDirection": "left"
+      }
+    },
+    {
+      "id": "visit-us",
+      "refPointName": "Harness_Ref_Point_01",
+      "position": {
+        "x": -0.2272,
+        "y": 0.531,
+        "z": 0.0636
+      },
+      "scrollStart": 0.92,
+      "scrollEnd": 0.96,
+      "content": {
+        "title": "VISIT US",
+        "subtitle": "ADDIS ABEBA",
+        "description": "Kera, SD Bldg. Office 404",
+        "stats": []
+      },
+      "styling": {
+        "forceDirection": "right"
+      }
+    }
+  ]
+}
